@@ -3,6 +3,7 @@ package com.example.lampunginv01
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
 import android.animation.ValueAnimator
+import android.content.Intent
 import android.os.Handler
 import android.os.Looper
 import android.view.LayoutInflater
@@ -51,11 +52,15 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             MenuModel(2, "Berita", R.drawable.ic_berita),
             MenuModel(3, "Kontak Darurat", R.drawable.ic_kontakdarurat),
             MenuModel(4, "Cek Lokasi", R.drawable.ic_lapor),
-            MenuModel(5, "Lainnya", R.drawable.ic_lainnya)
+            MenuModel(5, "Lainnya", R.drawable.ic_lainnya) // Gunakan ikon titik-titik (ic_lainnya)
         )
 
         val menuAdapter = MenuAdapter(menuList) { selectedMenu ->
-            Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
+            if (selectedMenu.title == "Lainnya") {
+                OtherMenuActivity.start(requireContext(), OtherMenuActivity.TAB_UNGGULAN)
+            } else {
+                Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.rvFeatures.apply {
@@ -194,7 +199,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         )
 
         val categoryAdapter = NewsCategoryAdapter(categoryList) { category ->
-            Toast.makeText(requireContext(), "Kategori: ${category.title}", Toast.LENGTH_SHORT).show()
+            if (category.title == "Semua Kategori") {
+                OtherMenuActivity.start(requireContext(), OtherMenuActivity.TAB_KATEGORI)
+            } else {
+                Toast.makeText(requireContext(), "Kategori: ${category.title}", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.rvNewsCategories.apply {
@@ -210,24 +219,24 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 1, 
                 "Pengguna Baru",
                 "Cek fitur unggulan, biar kamu makin tahu.",
-                R.drawable.banner2 // Ganti dengan gambar relevan
+                R.drawable.banner2 
             ),
             RecommendationModel(
                 2, 
                 "Pendatang Baru di Lampung",
                 "Hai Sekelik, Masih baru di Lampung? Fitur ini bisa bantu kamu loh",
-                R.drawable.banner2 // Ganti dengan gambar relevan
+                R.drawable.banner2 
             ),
             RecommendationModel(
                 3, 
                 "Eksplore Lampung",
                 "Mau tahu destinasi liburan di Lampung? Cek di sini",
-                R.drawable.banner2 // Ganti dengan gambar relevan
+                R.drawable.banner2 
             )
         )
 
         val recommendationAdapter = RecommendationAdapter(recommendationList) { item ->
-            Toast.makeText(requireContext(), "Rekomendasi: ${item.title}", Toast.LENGTH_SHORT).show()
+             Toast.makeText(requireContext(), "Rekomendasi: ${item.title}", Toast.LENGTH_SHORT).show()
         }
 
         binding.rvRecommendations.apply {
