@@ -49,7 +49,8 @@ class OtherMenuActivity : AppCompatActivity() {
     }
 
     private fun setupClickListeners() {
-        binding.btnBack.setOnClickListener {
+        // Karena layout sudah diubah menggunakan container, kita listener di container
+        binding.btnBackContainer.setOnClickListener {
             finish()
         }
 
