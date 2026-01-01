@@ -21,11 +21,6 @@
             </intent-filter>
         </activity>
         
-        <activity 
-            android:name=".OtherMenuActivity"
-            android:exported="false"
-            android:theme="@style/Theme.LampungInV01"/>
-            
     </application>
 
 </manifest>

@@ -33,8 +33,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         // 1. Handling System Bar (Agar tidak tertutup Sinyal/Baterai)
         ViewCompat.setOnApplyWindowInsetsListener(binding.mainContent) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            // Tambahkan padding atas sesuai tinggi status bar
-            v.setPadding(v.paddingLeft, systemBars.top + 24, v.paddingRight, v.paddingBottom)
+            // Tambahkan padding atas sesuai tinggi status bar + extra space
+            v.setPadding(v.paddingLeft, systemBars.top + 40, v.paddingRight, v.paddingBottom)
             insets
         }
 
@@ -57,7 +57,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         val menuAdapter = MenuAdapter(menuList) { selectedMenu ->
             if (selectedMenu.title == "Lainnya") {
-                OtherMenuActivity.start(requireContext(), OtherMenuActivity.TAB_UNGGULAN)
+                if (activity is MainActivity) {
+                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_UNGGULAN))
+                }
             } else {
                 Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
             }
@@ -200,7 +202,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         val categoryAdapter = NewsCategoryAdapter(categoryList) { category ->
             if (category.title == "Semua Kategori") {
-                OtherMenuActivity.start(requireContext(), OtherMenuActivity.TAB_KATEGORI)
+                if (activity is MainActivity) {
+                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
+                }
             } else {
                 Toast.makeText(requireContext(), "Kategori: ${category.title}", Toast.LENGTH_SHORT).show()
             }

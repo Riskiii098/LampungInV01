@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
@@ -14,6 +15,9 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        // Force Light Mode
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+        
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         
@@ -64,13 +68,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    private fun loadFragment(fragment: Fragment) {
+    fun loadFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
             .commit()
     }
 
-    private fun updateBottomNavUI(index: Int) {
+    fun updateBottomNavUI(index: Int) {
         // Warna Default (Gray) dan Selected (Black)
         val colorDefault = Color.parseColor("#808080")
         val colorSelected = Color.BLACK

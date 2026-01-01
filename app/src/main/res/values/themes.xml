@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.LampungInV01" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.LampungInV01" parent="Theme.Material3.Light.NoActionBar">
         <!-- Mengubah warna background aplikasi -->
         <item name="android:windowBackground">#FFFDF8</item>
         <item name="colorSurface">#FFFDF8</item>
