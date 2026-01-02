@@ -24,6 +24,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     // Handler untuk Auto Slide
     private val sliderHandler = Handler(Looper.getMainLooper())
     private lateinit var sliderRunnable: Runnable
+    private var currentAnimator: ValueAnimator? = null
 
     override fun getViewBinding(inflater: LayoutInflater, container: ViewGroup?): FragmentHomeBinding {
         return FragmentHomeBinding.inflate(inflater, container, false)
@@ -103,6 +104,8 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
         // Definisi Runnable untuk Auto Slide dengan Animasi Slow
         sliderRunnable = Runnable {
+            // Cek lifecycle agar aman
+            if (!isAdded || view == null) return@Runnable
             // Cek jika sedang fake dragging agar tidak crash
             if (binding.vpSlider.isFakeDragging) return@Runnable
 
@@ -114,29 +117,49 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 binding.vpSlider.setCurrentItem(0, true)
             } else {
                 // Gunakan Fake Drag untuk animasi slide yang lebih pelan (custom duration)
-                binding.vpSlider.beginFakeDrag()
+                if (!binding.vpSlider.beginFakeDrag()) return@Runnable
                 
                 val width = binding.vpSlider.width.toFloat()
                 
                 // Durasi animasi disesuaikan menjadi 1000ms (1 detik) - sedikit lebih cepat dari sebelumnya (1500ms)
                 val animator = ValueAnimator.ofFloat(0f, width)
+                currentAnimator = animator
                 animator.duration = 1000 
                 animator.interpolator = AccelerateDecelerateInterpolator()
                 
                 var oldVal = 0f
                 animator.addUpdateListener { animation ->
+                    // Cek binding sebelum akses
+                    if (!isAdded || view == null) {
+                        currentAnimator?.cancel()
+                        return@addUpdateListener
+                    }
                     val currentValue = animation.animatedValue as Float
                     val delta = currentValue - oldVal
                     // Geser viewpager dengan fake drag (negatif untuk ke kanan/item berikutnya)
-                    binding.vpSlider.fakeDragBy(-delta)
+                    try {
+                        binding.vpSlider.fakeDragBy(-delta)
+                    } catch (e: Exception) {
+                        // Ignore potential errors during destruction
+                    }
                     oldVal = currentValue
                 }
                 
                 animator.addListener(object : AnimatorListenerAdapter() {
                     override fun onAnimationEnd(animation: Animator) {
                         super.onAnimationEnd(animation)
+                        currentAnimator = null
+                        if (!isAdded || view == null) return
                         // Akhiri fake drag agar snap ke halaman baru
                         if (binding.vpSlider.isFakeDragging) {
+                            binding.vpSlider.endFakeDrag()
+                        }
+                    }
+                    
+                    override fun onAnimationCancel(animation: Animator) {
+                        super.onAnimationCancel(animation)
+                        currentAnimator = null
+                        if (isAdded && view != null && binding.vpSlider.isFakeDragging) {
                             binding.vpSlider.endFakeDrag()
                         }
                     }
@@ -273,5 +296,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         super.onPause()
         // Stop Auto Slide saat layar tidak aktif (Hemat Baterai)
         sliderHandler.removeCallbacks(sliderRunnable)
+        currentAnimator?.cancel()
     }
 }

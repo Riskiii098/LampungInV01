@@ -34,7 +34,7 @@
             android:text="Kategori"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:textStyle="bold" />
+            android:fontFamily="sans-serif" />
 
     </LinearLayout>
 

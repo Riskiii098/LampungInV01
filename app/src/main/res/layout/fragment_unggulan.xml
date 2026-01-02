@@ -20,7 +20,7 @@
             android:layout_height="wrap_content"
             android:text="Darurat &amp; Keamanan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginBottom="12dp"/>
 
@@ -53,7 +53,7 @@
                     android:layout_height="wrap_content"
                     android:text="Kontak Darurat"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -98,7 +98,7 @@
                     android:layout_height="wrap_content"
                     android:text="Info Ambulans Gratis"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -143,7 +143,7 @@
                     android:layout_height="wrap_content"
                     android:text="Bank Darah"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -164,7 +164,7 @@
             android:layout_height="wrap_content"
             android:text="Aspirasi &amp; Pengaduan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -198,7 +198,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lapor Saja"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -243,7 +243,7 @@
                     android:layout_height="wrap_content"
                     android:text="Survei Kepuasan"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
 
                 <TextView
@@ -264,7 +264,7 @@
             android:layout_height="wrap_content"
             android:text="Kesehatan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -296,7 +296,7 @@
                     android:layout_height="wrap_content"
                     android:text="Cek BPJS Kesehatan"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -338,7 +338,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lokasi Faskes"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -380,7 +380,7 @@
                     android:layout_height="wrap_content"
                     android:text="Antrian Rumah Sakit"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -422,7 +422,7 @@
                     android:layout_height="wrap_content"
                     android:text="Konsultasi Online"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -442,7 +442,7 @@
             android:layout_height="wrap_content"
             android:text="Informasi Publik dan Data"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -474,7 +474,7 @@
                     android:layout_height="wrap_content"
                     android:text="Berita Resmi"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -516,7 +516,7 @@
                     android:layout_height="wrap_content"
                     android:text="Info Harga Pangan"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -558,7 +558,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lowongan Kerja"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -600,7 +600,7 @@
                     android:layout_height="wrap_content"
                     android:text="Jadwal Kegiatan"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -620,7 +620,7 @@
             android:layout_height="wrap_content"
             android:text="Fasilitas Umum"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -652,7 +652,7 @@
                     android:layout_height="wrap_content"
                     android:text="Lokasi Wisata"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -694,7 +694,7 @@
                     android:layout_height="wrap_content"
                     android:text="WiFi Publik"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -714,7 +714,7 @@
             android:layout_height="wrap_content"
             android:text="Administrasi Kependudukan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -764,7 +764,7 @@
                             android:layout_height="wrap_content"
                             android:text="Kab. Lampung Selatan"
                             android:textSize="13sp"
-                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -814,7 +814,7 @@
                             android:layout_height="wrap_content"
                             android:text="Kota Metro"
                             android:textSize="13sp"
-                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -864,7 +864,7 @@
                             android:layout_height="wrap_content"
                             android:text="Kab. Lampung Timur"
                             android:textSize="13sp"
-                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -914,7 +914,7 @@
                             android:layout_height="wrap_content"
                             android:text="Kab. Tulang Bawang Barat"
                             android:textSize="13sp"
-                            android:textStyle="bold"
+                            android:fontFamily="sans-serif"
                             android:textColor="@color/black"/>
                         <TextView
                             android:layout_width="wrap_content"
@@ -952,7 +952,7 @@
                         android:layout_height="wrap_content"
                         android:text="Lainnya"
                         android:textSize="13sp"
-                        android:textStyle="bold"
+                        android:fontFamily="sans-serif"
                         android:textColor="#F8C300"/>
 
                     <ImageView
@@ -972,7 +972,7 @@
             android:layout_height="wrap_content"
             android:text="Layanan Sosial &amp; Keagamaan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -1004,7 +1004,7 @@
                     android:layout_height="wrap_content"
                     android:text="Informasi &amp; Cek Bansos"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1046,7 +1046,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pembayaran Zakat (Baznas)"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1066,7 +1066,7 @@
             android:layout_height="wrap_content"
             android:text="Lingkungan &amp; Kebencanaan"
             android:textSize="18sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
@@ -1098,7 +1098,7 @@
                     android:layout_height="wrap_content"
                     android:text="Peringatan Dini Cuaca"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1140,7 +1140,7 @@
                     android:layout_height="wrap_content"
                     android:text="Informasi TPS/TPA"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1182,7 +1182,7 @@
                     android:layout_height="wrap_content"
                     android:text="Pengujian Kualitas Air"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1224,7 +1224,7 @@
                     android:layout_height="wrap_content"
                     android:text="AMDAL (DLH)"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
@@ -1266,7 +1266,7 @@
                     android:layout_height="wrap_content"
                     android:text="SIH3 (Hidrologi, Hidrometerologi, Hidrogeologi)"
                     android:textSize="13sp"
-                    android:textStyle="bold"
+                    android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
                 <TextView
                     android:layout_width="wrap_content"
