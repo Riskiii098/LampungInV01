@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:text="Hai, Sekelik👋"
             android:textSize="24sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:text="Email"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="32dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -103,7 +103,7 @@
             android:layout_height="wrap_content"
             android:text="Password"
             android:textSize="16sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -183,7 +183,7 @@
             android:layout_height="wrap_content"
             android:text="Lupa Password?"
             android:textSize="14sp"
-            android:textStyle="bold"
+            android:fontFamily="sans-serif-medium"
             android:textColor="@color/black"
             android:clickable="true"
             android:focusable="true"
@@ -260,7 +260,7 @@
                 android:layout_height="wrap_content"
                 android:text="Masuk dengan Google"
                 android:textSize="14sp"
-                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="@color/black"
                 android:layout_marginStart="12dp"/>
         </LinearLayout>
@@ -298,7 +298,7 @@
                 android:layout_height="wrap_content"
                 android:text="Buat Akun"
                 android:textSize="14sp"
-                android:textStyle="bold"
+                android:fontFamily="sans-serif-medium"
                 android:textColor="@color/black"
                 android:clickable="true"
                 android:focusable="true"/>

@@ -99,7 +99,7 @@ class ProfileFragment : Fragment() {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = true
                 ds.color = resources.getColor(android.R.color.black, null) // Atau warna lain
-                ds.typeface = Typeface.DEFAULT_BOLD // Medium/Bold
+                ds.typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL)
             }
         }
 
@@ -112,7 +112,7 @@ class ProfileFragment : Fragment() {
                 super.updateDrawState(ds)
                 ds.isUnderlineText = true
                 ds.color = resources.getColor(android.R.color.black, null)
-                ds.typeface = Typeface.DEFAULT_BOLD
+                ds.typeface = Typeface.create("sans-serif-medium", Typeface.NORMAL)
             }
         }
 
