@@ -3,6 +3,7 @@ package com.example.lampunginv01
 import android.content.res.ColorStateList
 import android.graphics.Color
 import android.os.Bundle
+import android.view.WindowManager
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
@@ -11,24 +12,26 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.lampunginv01.databinding.ActivityMainBinding
 
+import androidx.activity.SystemBarStyle
+
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Force Light Mode
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
-        
+
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Apply window insets to handle gesture navigation padding
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            // Set padding hanya untuk bawah (navigasi) agar bottom nav naik
-            // Biarkan top (status bar) handled oleh Fragment masing-masing atau background activity
-            v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom)
+            // Only apply bottom padding for navigation bar, keep top (status bar) 0 to let content flow behind it
+            v.setPadding(0, 0, 0, systemBars.bottom)
             insets
         }
 

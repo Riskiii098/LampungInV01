@@ -2,4 +2,6 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="soft_yellow_white">#FFFEF7</color>
+    <color name="soft_yellow_gradient_start">#66FDD835</color>
 </resources>

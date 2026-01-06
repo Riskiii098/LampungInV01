@@ -2,9 +2,9 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.LampungInV01" parent="Theme.Material3.Light.NoActionBar">
         <!-- Mengubah warna background aplikasi -->
-        <item name="android:windowBackground">#FFFDF8</item>
-        <item name="colorSurface">#FFFDF8</item>
-    </style>
+        <item name="android:windowBackground">@color/soft_yellow_white</item>
+        <item name="colorSurface">@color/soft_yellow_white</item>g
 
+    </style>
     <style name="Theme.LampungInV01" parent="Base.Theme.LampungInV01" />
 </resources>

@@ -12,7 +12,6 @@
         android:id="@+id/main_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="24dp"
         android:paddingBottom="24dp">
 
         <com.google.android.material.imageview.ShapeableImageView
@@ -20,6 +19,7 @@
             android:layout_width="47dp"
             android:layout_height="47dp"
             android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
             android:scaleType="fitXY"
             android:src="@drawable/ic_profile"
             app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"
