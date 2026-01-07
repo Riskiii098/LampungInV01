@@ -1,6 +1,7 @@
 package com.example.lampunginv01
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lampunginv01.databinding.ItemKategoriGridBinding
@@ -13,9 +14,15 @@ class KategoriGridAdapter(
     inner class ViewHolder(private val binding: ItemKategoriGridBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(item: MenuModel) {
-            binding.tvTitle.text = item.title
-            binding.ivIcon.setImageResource(item.iconRes)
-            binding.root.setOnClickListener { onClick(item) }
+            if (item.id == -1) {
+                binding.root.visibility = View.INVISIBLE
+                binding.root.setOnClickListener(null)
+            } else {
+                binding.root.visibility = View.VISIBLE
+                binding.tvTitle.text = item.title
+                binding.ivIcon.setImageResource(item.iconRes)
+                binding.root.setOnClickListener { onClick(item) }
+            }
         }
     }
 

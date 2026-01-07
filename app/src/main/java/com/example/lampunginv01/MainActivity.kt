@@ -12,6 +12,8 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import com.example.lampunginv01.databinding.ActivityMainBinding
 
+import android.content.Intent
+
 import androidx.activity.SystemBarStyle
 
 class MainActivity : AppCompatActivity() {
@@ -41,6 +43,20 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             loadFragment(HomeFragment())
             updateBottomNavUI(0)
+            handleIntent(intent)
+        }
+    }
+
+    override fun onNewIntent(intent: Intent) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        handleIntent(intent)
+    }
+
+    private fun handleIntent(intent: Intent?) {
+        if (intent?.getBooleanExtra("OPEN_REPORT", false) == true) {
+            loadFragment(ReportFragment())
+            updateBottomNavUI(2)
         }
     }
 
@@ -56,8 +72,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bottomNavInclude.navReport.setOnClickListener {
-            loadFragment(ReportFragment())
-            updateBottomNavUI(2)
+            startActivity(Intent(this, ReportGuidelinesActivity::class.java))
         }
 
         binding.bottomNavInclude.navNotification.setOnClickListener {

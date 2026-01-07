@@ -215,11 +215,11 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
 
     private fun setupNewsCategories() {
         val categoryList = listOf(
-            NewsCategoryModel(1, "Kesehatan", R.drawable.kt_kesehatan),
-            NewsCategoryModel(2, "Darurat & Keamanan", R.drawable.kt_darurat),
-            NewsCategoryModel(3, "Aspirasi & Pengaduan", R.drawable.kt_aspirasi),
-            NewsCategoryModel(4, "Fasilitas Umum", R.drawable.kt_fasilitas),
-            NewsCategoryModel(5, "Administrasi Kependudukan", R.drawable.kt_administrasi),
+            NewsCategoryModel(1, "Kesehatan", R.drawable.ic_kt5),
+            NewsCategoryModel(2, "Darurat & Keamanan", R.drawable.ic_kt2),
+            NewsCategoryModel(3, "Aspirasi & Pengaduan", R.drawable.ic_kt1),
+            NewsCategoryModel(4, "Fasilitas Umum", R.drawable.ic_kt7),
+            NewsCategoryModel(5, "Administrasi Kependudukan", R.drawable.ic_kt3),
             NewsCategoryModel(6, "Semua Kategori", R.drawable.kt_lainnya)
         )
 

@@ -12,15 +12,15 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        android:padding="12dp">
+        android:paddingHorizontal="12dp">
 
         <ImageView
             android:id="@+id/iv_icon"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
             android:src="@drawable/ic_lapor" />
 
         <TextView
@@ -31,6 +31,7 @@
             android:layout_weight="1"
             android:ellipsize="end"
             android:maxLines="2"
+            android:includeFontPadding="false"
             android:text="Kategori"
             android:textColor="@color/black"
             android:textSize="12sp"

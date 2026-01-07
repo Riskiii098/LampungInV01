@@ -27,23 +27,22 @@ class KategoriFragment : Fragment() {
     }
 
     private fun setupGrid() {
-        // Data Dummy (14 Item: 7 Kiri, 7 Kanan)
-        // Semua menggunakan icon Sosial (kt_aspirasi) sesuai permintaan
+        // Data Dummy (13 Item: 12 Normal + 1 Spacer + 1 Kanan)
         val categoryList = listOf(
-            MenuModel(1, "Administrasi Kependudukan", R.drawable.kt_aspirasi),
-            MenuModel(2, "Kesehatan", R.drawable.kt_aspirasi),
-            MenuModel(3, "Fasilitas Umum", R.drawable.kt_aspirasi),
-            MenuModel(4, "Darurat & Keamanan", R.drawable.kt_aspirasi),
-            MenuModel(5, "Informasi Publik & Data", R.drawable.kt_aspirasi),
-            MenuModel(6, "Lingkungan & Kebencanaan", R.drawable.kt_aspirasi),
-            MenuModel(7, "Pendidikan & Pengembangan SDM", R.drawable.kt_aspirasi),
-            MenuModel(8, "Perizinan & Usaha", R.drawable.kt_aspirasi),
-            MenuModel(9, "Perizinan & Usaha", R.drawable.kt_aspirasi),
-            MenuModel(10, "Ketenagakerjaan", R.drawable.kt_aspirasi),
-            MenuModel(11, "Layanan Sosial & Keagamaan", R.drawable.kt_aspirasi),
-            MenuModel(12, "Pajak & Pembayaran", R.drawable.kt_aspirasi),
-            MenuModel(13, "Aspirasi & Pengaduan", R.drawable.kt_aspirasi),
-            MenuModel(14, "Aspirasi & Pengaduan", R.drawable.kt_aspirasi)
+            MenuModel(1, "Aspirasi & Pengaduan", R.drawable.ic_kt1),
+            MenuModel(2, "Darurat & Keamanan", R.drawable.ic_kt2),
+            MenuModel(3, "Administrasi Kependudukan", R.drawable.ic_kt3),
+            MenuModel(4, "Layanan Sosial & Keagamaan", R.drawable.ic_kt4),
+            MenuModel(5, "Kesehatan", R.drawable.ic_kt5),
+            MenuModel(6, "Informasi Publik & Data", R.drawable.ic_kt6),
+            MenuModel(7, "Fasilitas Umum", R.drawable.ic_kt7),
+            MenuModel(8, "Pajak & Pembayaran", R.drawable.ic_kt8),
+            MenuModel(9, "Pendidikan & Pengembangan SDM", R.drawable.ic_kt9),
+            MenuModel(10, "Perizinan & Usaha", R.drawable.ic_kt10),
+            MenuModel(11, "Rekreasi", R.drawable.ic_kt11),
+            MenuModel(12, "Lingkungan & Kebencanaan", R.drawable.ic_kt12),
+            MenuModel(-1, "", 0), // Item Spacer agar item selanjutnya di kanan
+            MenuModel(13, "Ketenagakerjaan", R.drawable.ic_kt13)
         )
 
         val adapter = KategoriGridAdapter(categoryList) { item ->
