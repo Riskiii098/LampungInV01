@@ -61,6 +61,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                 if (activity is MainActivity) {
                     (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_UNGGULAN))
                 }
+            } else if (selectedMenu.title == "Laporan") {
+                val intent = Intent(requireContext(), MakeReportActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
             }

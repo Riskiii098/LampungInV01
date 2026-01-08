@@ -26,19 +26,17 @@ class ReportGuidelinesActivity : AppCompatActivity() {
         }
 
         binding.btnContinue.setOnClickListener {
-            // if (binding.cbDontShowAgain.isChecked) {
-            //     val sharedPref = getSharedPreferences("LampungInPrefs", MODE_PRIVATE)
-            //     with(sharedPref.edit()) {
-            //         putBoolean("skip_report_guidelines", true)
-            //         apply()
-            //     }
-            // }
+             if (binding.cbDontShowAgain.isChecked) {
+                 val sharedPref = getSharedPreferences("LampungInPrefs", MODE_PRIVATE)
+                 with(sharedPref.edit()) {
+                     putBoolean("skip_report_guidelines", true)
+                     apply()
+                 }
+             }
             
-            // val intent = Intent(this, MainActivity::class.java)
-            // intent.putExtra("OPEN_REPORT", true)
-            // intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
-            // startActivity(intent)
-            // finish()
+            val intent = Intent(this, MakeReportActivity::class.java)
+            startActivity(intent)
+            finish()
         }
 
         binding.btnClose.setOnClickListener {

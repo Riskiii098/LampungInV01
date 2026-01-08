@@ -21,6 +21,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReportGuidelinesActivity" />
+        <activity android:name=".MakeReportActivity" />
+        <activity android:name=".TakePhotoActivity" />
+        <activity android:name=".LocationReportActivity" />
         
     </application>
 
