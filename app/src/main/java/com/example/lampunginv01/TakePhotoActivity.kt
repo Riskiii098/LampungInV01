@@ -45,11 +45,18 @@ class TakePhotoActivity : AppCompatActivity() {
         val cameraPreviewContainer = findViewById<View>(R.id.camera_preview_container)
         val bottomContainer = findViewById<View>(R.id.bottom_container)
         val ivCapturedPhoto = findViewById<ImageView>(R.id.iv_captured_photo)
+        
+        val viewDimmerHeader = findViewById<View>(R.id.view_dimmer_header)
+        val viewDimmerPreview = findViewById<View>(R.id.view_dimmer_preview)
 
         // 1. Logic Klik Izinkan -> Masuk Mode Kamera (State 2)
         btnAllow.setOnClickListener {
             layoutPermission.visibility = View.GONE
             layoutCameraUi.visibility = View.VISIBLE
+            
+            // Hide Dimmers
+            viewDimmerHeader.visibility = View.GONE
+            viewDimmerPreview.visibility = View.GONE
             
             // Ubah Background Preview jadi agak gelap (simulasi kamera aktif)
             cameraPreviewContainer.setBackgroundColor(Color.parseColor("#333333"))
@@ -87,14 +94,14 @@ class TakePhotoActivity : AppCompatActivity() {
     }
 
     private fun setCameraLayoutWeights(previewContainer: View, bottomContainer: View) {
-        // Memperbesar area preview (weight 3.7 -> 4.5)
-        // Memperkecil area bawah (weight 2.6 -> 1.8)
+        // Memperbesar area preview (weight 3.3 -> 3.8)
+        // Memperkecil area bawah (weight 3.0 -> 2.5) agar tidak terlalu lebar
         val previewParams = previewContainer.layoutParams as LinearLayout.LayoutParams
-        previewParams.weight = 4.5f
+        previewParams.weight = 3.8f
         previewContainer.layoutParams = previewParams
 
         val bottomParams = bottomContainer.layoutParams as LinearLayout.LayoutParams
-        bottomParams.weight = 1.8f
+        bottomParams.weight = 2.5f
         bottomContainer.layoutParams = bottomParams
     }
 }

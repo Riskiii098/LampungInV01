@@ -24,6 +24,9 @@
         <activity android:name=".MakeReportActivity" />
         <activity android:name=".TakePhotoActivity" />
         <activity android:name=".LocationReportActivity" />
+        <activity android:name=".ReportDetailActivity" />
+        <activity android:name=".ReviewReportActivity" />
+        <activity android:name=".ReportSuccessActivity" />
         
     </application>
 

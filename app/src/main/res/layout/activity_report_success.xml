@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Background Kuning Setengah (Layer Bawah) - Diperbesar -->
+    <ImageView
+        android:id="@+id/iv_background_yellow"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/kuningsetengah"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Ikon Sukses (Layer Atas) - Diperbesar -->
+    <ImageView
+        android:id="@+id/iv_success_icon"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/sukses"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tombol Close (X) Pojok Kanan Atas -->
+    <ImageView
+        android:id="@+id/iv_close"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="24dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Teks Judul -->
+    <TextView
+        android:id="@+id/tv_title_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:text="Laporan Kamu berhasil Terkirim!"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/iv_success_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Teks Subjudul -->
+    <TextView
+        android:id="@+id/tv_subtitle_success"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="32dp"
+        android:fontFamily="sans-serif-light"
+        android:text="Cek progress laporan kamu di halaman aktivitas"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textAlignment="center"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_success"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tombol Cek Status Laporan (Baru) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_check_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:text="Cek Status Laporan"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:backgroundTint="#F8C300"
+        android:paddingVertical="14dp"
+        app:cornerRadius="8dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_background_yellow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Tombol Kembali ke Beranda (Style Updated) -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="12dp"
+        android:text="Kembali ke Beranda"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:backgroundTint="@color/white"
+        android:paddingVertical="14dp"
+        app:cornerRadius="8dp"
+        app:strokeColor="#DDDDDD"
+        app:strokeWidth="1dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_check_status"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

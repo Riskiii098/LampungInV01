@@ -42,6 +42,50 @@ class MakeReportActivity : AppCompatActivity() {
             ExpandableCategoryAdapter.ExpandableItem(
                 "Masalah Layanan Kesehatan",
                 "Keluhan terkait layanan kesehatan seperti fasilitas medis, rumah sakit, BPJS, ketersediaan ambulans, atau kebutuhan donor darah."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Kerusakan Infrastruktur",
+                "Kerusakan atau gangguan pada sarana umum (jalan, jembatan, saluran air, dll)."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Ganggguan Lingkungan",
+                "Melaporkan permasalahan lingkungan (penumpukan sampah, pencemaran air atau udara, TPS ilegal, kerusakan ruang terbuka, serta kendala pengelolaan kebersihan dan tata lingkungan)."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Perizinan & Administrasi Usaha",
+                "Laporan bagi pelaku usaha atau masyarakat yang mengalami kendala dalam proses perizinan seperti pengajuan NIB, izin tata ruang, layanan DPMPTSP, atau administrasi pertanahan di BPN."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Laporan Kebencanaan",
+                "Melaporkan kejadian atau dampak bencana alam dan cuaca ekstrem serta menerima notifikasi peringatan dini yang membutuhkan koordinasi antarinstansi."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Masalah Ketenagakerjaan",
+                "Melaporkan atau menanyakan hal terkait dunia kerja meliputi informasi lowongan, magang, pelatihan kerja, konsultasi tenaga kerja, atau sengketa dan kendala pekerjaan."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Permasalahan Transportasi",
+                "Berkaitan dengan lalu lintas dan perhubungan seperti rambu rusak, angkutan umum, kemacetan, kecelakaan, atau gangguan fasilitas transportasi."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Laporan Umum Lainnya",
+                "Laporan yang tidak termasuk dalam kategori khusus."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Keluhan Layanan Publik",
+                "Melaporkan pengalaman tidak memuaskan terhadap pelayanan pemerintahan secara umum, proses birokrasi, aplikasi pemerintah, atau interaksi dengan instansi daerah."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Pajak & Retribusi",
+                "Melaporkan masalah yang berkaitan dengan pajak daerah dan pembayaran resmi seperti PBB, pajak kendaraan, retribusi, atau gangguan pada sistem pembayaran online milik pemerintah."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Informasi Tidak Akurat",
+                "Melaporkan temuan data atau informasi pemerintah yang keliru, menyesatkan, tidak diperbarui, atau sulit diakses pada layanan seperti JDIH, PPID, harga pangan, dan data terbuka."
+            ),
+            ExpandableCategoryAdapter.ExpandableItem(
+                "Aduan Sosial Masyarakat",
+                "Melaporkan pengalaman tidak memuaskan terhadap pelayanan pemerintahan secara umum, proses birokrasi, aplikasi pemerintah, atau interaksi dengan instansi daerah."
             )
         )
         val expandableAdapter = ExpandableCategoryAdapter(allCategories) { categoryName ->

@@ -22,5 +22,22 @@ class LocationReportActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.iv_back).setOnClickListener {
             finish()
         }
+
+        // Logic Switch Detail Lokasi
+        val switchLocation = findViewById<com.google.android.material.switchmaterial.SwitchMaterial>(R.id.switch_location)
+        val layoutAutoAddress = findViewById<android.widget.LinearLayout>(R.id.layout_auto_address)
+
+        // Set state awal
+        layoutAutoAddress.visibility = if (switchLocation.isChecked) android.view.View.VISIBLE else android.view.View.GONE
+
+        // Listener switch
+        switchLocation.setOnCheckedChangeListener { _, isChecked ->
+            layoutAutoAddress.visibility = if (isChecked) android.view.View.VISIBLE else android.view.View.GONE
+        }
+
+        findViewById<android.view.View>(R.id.btn_next).setOnClickListener {
+            val intent = android.content.Intent(this, ReportDetailActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
