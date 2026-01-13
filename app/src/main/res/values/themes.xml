@@ -3,7 +3,8 @@
     <style name="Base.Theme.LampungInV01" parent="Theme.Material3.Light.NoActionBar">
         <!-- Mengubah warna background aplikasi -->
         <item name="android:windowBackground">@color/soft_yellow_white</item>
-        <item name="colorSurface">@color/soft_yellow_white</item>g
+        <item name="colorSurface">@color/soft_yellow_white</item>
+        <item name="android:windowLightStatusBar">true</item>g
 
     </style>
     <style name="Theme.LampungInV01" parent="Base.Theme.LampungInV01" />

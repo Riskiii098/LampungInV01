@@ -14,7 +14,7 @@
         android:paddingTop="24dp"
         android:paddingBottom="24dp">
 
-        <!-- Bagian Darurat & Keamanan -->
+        <!-- 1. Bagian Darurat & Keamanan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -33,21 +33,18 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/bg_rounded_ripple">
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_marginStart="12dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -55,7 +52,6 @@
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -78,21 +74,18 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/bg_rounded_ripple">
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_marginStart="12dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -100,7 +93,6 @@
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -123,21 +115,18 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/bg_rounded_ripple">
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_marginStart="12dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -145,7 +134,6 @@
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -158,7 +146,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Aspirasi & Pengaduan -->
+        <!-- 2. Bagian Aspirasi & Pengaduan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -178,21 +166,18 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/bg_rounded_ripple">
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_marginStart="12dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -200,7 +185,6 @@
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -223,21 +207,18 @@
             android:clickable="true"
             android:focusable="true"
             android:background="@drawable/bg_rounded_ripple">
-
             <com.google.android.material.imageview.ShapeableImageView
                 android:layout_width="36dp"
                 android:layout_height="36dp"
                 android:src="@android:color/darker_gray"
                 android:scaleType="centerCrop"
                 app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
                 android:layout_marginStart="12dp">
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -245,7 +226,6 @@
                     android:textSize="13sp"
                     android:fontFamily="sans-serif"
                     android:textColor="@color/black"/>
-
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -258,7 +238,343 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Kesehatan (4 Fitur) -->
+        <!-- 3. Bagian Pajak & Pembayaran (NEW) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pajak &amp; Pembayaran"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_rounded_ripple">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@android:color/darker_gray"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pajak Kendaraan"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="6dp"
+            android:layout_marginTop="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="@drawable/bg_rounded_ripple">
+            <com.google.android.material.imageview.ShapeableImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:src="@android:color/darker_gray"
+                android:scaleType="centerCrop"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pajak Bumi &amp; Bangunan (PBB)"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lorem ipsum dolor sit amet"
+                    android:textSize="11sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- 4. Bagian Administrasi Kependudukan -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Administrasi Kependudukan"
+            android:textSize="18sp"
+            android:fontFamily="sans-serif-medium"
+            android:textColor="@color/black"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#FFFFFF"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#E0E0E0"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="12dp">
+
+                <!-- Item 1 -->
+                <LinearLayout
+                    android:id="@+id/btn_kab_lampung_selatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_rounded_ripple">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:color/darker_gray"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kab. Lampung Selatan"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disdukcapil Kab. Lampung Selatan"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#F8C300"/>
+                </LinearLayout>
+
+                <!-- Item 2 -->
+                <LinearLayout
+                    android:id="@+id/btn_kota_metro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_rounded_ripple">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:color/darker_gray"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kota Metro"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disdukcapil Kota Metro"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#F8C300"/>
+                </LinearLayout>
+
+                <!-- Item 3 -->
+                <LinearLayout
+                    android:id="@+id/btn_kab_lampung_timur"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_rounded_ripple">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:color/darker_gray"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kab. Lampung Timur"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disdukcapil Kab. Lampung Timur"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#F8C300"/>
+                </LinearLayout>
+
+                <!-- Item 4 -->
+                <LinearLayout
+                    android:id="@+id/btn_kab_tulang_bawang_barat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingVertical="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_rounded_ripple">
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:src="@android:color/darker_gray"
+                        android:scaleType="centerCrop"
+                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Kab. Tulang Bawang Barat"
+                            android:textSize="13sp"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Disdukcapil Kab. Tulang Bawang Barat"
+                            android:textSize="11sp"
+                            android:textColor="@android:color/darker_gray"
+                            android:maxLines="1"
+                            android:ellipsize="end"
+                            android:layout_marginTop="2dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#F8C300"/>
+                </LinearLayout>
+
+                <!-- Lainnya Link -->
+                <LinearLayout
+                    android:id="@+id/btn_lainnya_kependudukan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingVertical="8dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/bg_rounded_ripple">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lainnya"
+                        android:textSize="13sp"
+                        android:fontFamily="sans-serif"
+                        android:textColor="#F8C300"/>
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_right"
+                        android:layout_marginStart="4dp"
+                        app:tint="#F8C300"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- 5. Bagian Kesehatan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -269,7 +585,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Kesehatan 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -310,7 +625,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Kesehatan 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -352,7 +666,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Kesehatan 3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -394,7 +707,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Kesehatan 4 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -436,7 +748,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Informasi Publik dan Data (4 Fitur) -->
+        <!-- 6. Bagian Informasi Publik dan Data -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -447,7 +759,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Info 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -488,7 +799,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Info 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -530,7 +840,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Info 3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -572,7 +881,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Info 4 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -614,7 +922,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Fasilitas Umum (2 Fitur) -->
+        <!-- 7. Bagian Fasilitas Umum -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -625,7 +933,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Fasilitas 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -666,7 +973,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Fasilitas 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -708,265 +1014,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Administrasi Kependudukan (Desain Khusus) -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Administrasi Kependudukan"
-            android:textSize="18sp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/black"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="12dp"/>
-
-        <com.google.android.material.card.MaterialCardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:cardBackgroundColor="#FFFFFF"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="0dp"
-            app:strokeColor="#E0E0E0"
-            app:strokeWidth="1dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="12dp">
-
-                <!-- Item 1 -->
-                <LinearLayout
-                    android:id="@+id/btn_kab_lampung_selatan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingVertical="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/bg_rounded_ripple">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@android:color/darker_gray"
-                        android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kab. Lampung Selatan"
-                            android:textSize="13sp"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Disdukcapil Kab. Lampung Selatan"
-                            android:textSize="11sp"
-                            android:textColor="@android:color/darker_gray"
-                            android:maxLines="1"
-                            android:ellipsize="end"
-                            android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="#F8C300"/>
-                </LinearLayout>
-
-                <!-- Item 2 -->
-                <LinearLayout
-                    android:id="@+id/btn_kota_metro"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingVertical="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/bg_rounded_ripple">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@android:color/darker_gray"
-                        android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kota Metro"
-                            android:textSize="13sp"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Disdukcapil Kota Metro"
-                            android:textSize="11sp"
-                            android:textColor="@android:color/darker_gray"
-                            android:maxLines="1"
-                            android:ellipsize="end"
-                            android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="#F8C300"/>
-                </LinearLayout>
-
-                <!-- Item 3 -->
-                <LinearLayout
-                    android:id="@+id/btn_kab_lampung_timur"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingVertical="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/bg_rounded_ripple">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@android:color/darker_gray"
-                        android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kab. Lampung Timur"
-                            android:textSize="13sp"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Disdukcapil Kab. Lampung Timur"
-                            android:textSize="11sp"
-                            android:textColor="@android:color/darker_gray"
-                            android:maxLines="1"
-                            android:ellipsize="end"
-                            android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="#F8C300"/>
-                </LinearLayout>
-
-                <!-- Item 4 -->
-                <LinearLayout
-                    android:id="@+id/btn_kab_tulang_bawang_barat"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:paddingVertical="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/bg_rounded_ripple">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:layout_width="36dp"
-                        android:layout_height="36dp"
-                        android:src="@android:color/darker_gray"
-                        android:scaleType="centerCrop"
-                        app:shapeAppearanceOverlay="@style/ShapeAppearance.Material3.Corner.Full"/>
-
-                    <LinearLayout
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Kab. Tulang Bawang Barat"
-                            android:textSize="13sp"
-                            android:fontFamily="sans-serif"
-                            android:textColor="@color/black"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Disdukcapil Kab. Tulang Bawang Barat"
-                            android:textSize="11sp"
-                            android:textColor="@android:color/darker_gray"
-                            android:maxLines="1"
-                            android:ellipsize="end"
-                            android:layout_marginTop="2dp"/>
-                    </LinearLayout>
-
-                    <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:src="@drawable/ic_arrow_right"
-                        app:tint="#F8C300"/>
-                </LinearLayout>
-
-                <!-- Lainnya Link -->
-                <LinearLayout
-                    android:id="@+id/btn_lainnya_kependudukan"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center"
-                    android:paddingVertical="8dp"
-                    android:layout_marginTop="8dp"
-                    android:clickable="true"
-                    android:focusable="true"
-                    android:background="@drawable/bg_rounded_ripple">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Lainnya"
-                        android:textSize="13sp"
-                        android:fontFamily="sans-serif"
-                        android:textColor="#F8C300"/>
-
-                    <ImageView
-                        android:layout_width="16dp"
-                        android:layout_height="16dp"
-                        android:src="@drawable/ic_arrow_right"
-                        android:layout_marginStart="4dp"
-                        app:tint="#F8C300"/>
-                </LinearLayout>
-
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- Bagian Layanan Sosial & Keagamaan (2 Fitur) -->
+        <!-- 8. Bagian Layanan Sosial & Keagamaan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -977,7 +1025,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Sosial & Keagamaan 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1018,7 +1065,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Sosial & Keagamaan 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1060,7 +1106,7 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Bagian Lingkungan & Kebencanaan (5 Fitur) -->
+        <!-- 9. Bagian Lingkungan & Kebencanaan -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -1071,7 +1117,6 @@
             android:layout_marginTop="24dp"
             android:layout_marginBottom="12dp"/>
 
-        <!-- Lingkungan 1 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1112,7 +1157,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Lingkungan 2 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1154,7 +1198,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Lingkungan 3 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1196,7 +1239,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Lingkungan 4 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -1238,7 +1280,6 @@
             </LinearLayout>
         </LinearLayout>
 
-        <!-- Lingkungan 5 -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

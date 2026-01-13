@@ -27,6 +27,9 @@
         <activity android:name=".ReportDetailActivity" />
         <activity android:name=".ReviewReportActivity" />
         <activity android:name=".ReportSuccessActivity" />
+        <activity android:name=".ActivitySimulatedHistory" />
+        <activity android:name=".RiwayatLaporanActivity" />
+        <activity android:name=".DetailRiwayatActivity" />
         
     </application>
 

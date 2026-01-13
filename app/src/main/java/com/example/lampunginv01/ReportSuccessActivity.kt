@@ -93,9 +93,11 @@ class ReportSuccessActivity : AppCompatActivity() {
             finish()
         }
 
-        // Tombol Cek Status (Sementara ke Main dulu)
+        // Tombol Cek Status
         btnCheckStatus.setOnClickListener {
-             goHome() // TODO: Arahkan ke Fragment Aktivitas jika sudah ada
+            val intent = Intent(this, ActivitySimulatedHistory::class.java)
+            startActivity(intent)
+            finish()
         }
 
         // Tombol Kembali
@@ -105,7 +107,9 @@ class ReportSuccessActivity : AppCompatActivity() {
 
         // Tombol Close (X)
         ivClose.setOnClickListener {
-            goHome()
+            val intent = Intent(this, ActivitySimulatedHistory::class.java)
+            startActivity(intent)
+            finish()
         }
     }
 }

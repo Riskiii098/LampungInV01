@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.Typeface
 import android.os.Bundle
@@ -42,7 +43,15 @@ class ActivityFragment : Fragment() {
         }
 
         setupTabs()
+        setupListeners()
         switchTab(TAB_LAPORAN) // Default tab
+    }
+
+    private fun setupListeners() {
+        binding.layoutLaporanContent.cardCekLaporan.setOnClickListener {
+            val intent = Intent(requireContext(), RiwayatLaporanActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupTabs() {
@@ -71,8 +80,9 @@ class ActivityFragment : Fragment() {
             binding.tvTabDisimpan.setTypeface(null, Typeface.NORMAL)
             binding.indicatorDisimpan.visibility = View.INVISIBLE
             
-            // Ubah konten (Placeholder)
-            binding.tvContentPlaceholder.text = "Belum ada riwayat laporan."
+            // Ubah konten
+            binding.layoutLaporanContent.root.visibility = View.VISIBLE
+            binding.tvDisimpanPlaceholder.visibility = View.GONE
 
         } else {
             // UI Tab Laporan Inaktif
@@ -85,8 +95,9 @@ class ActivityFragment : Fragment() {
             binding.tvTabDisimpan.setTypeface(null, Typeface.BOLD)
             binding.indicatorDisimpan.visibility = View.VISIBLE
             
-            // Ubah konten (Placeholder)
-            binding.tvContentPlaceholder.text = "Belum ada item disimpan."
+            // Ubah konten
+            binding.layoutLaporanContent.root.visibility = View.GONE
+            binding.tvDisimpanPlaceholder.visibility = View.VISIBLE
         }
     }
 

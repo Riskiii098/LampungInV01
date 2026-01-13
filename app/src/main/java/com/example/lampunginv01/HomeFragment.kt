@@ -52,7 +52,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             MenuModel(1, "Laporan", R.drawable.ic_lapor),
             MenuModel(2, "Berita", R.drawable.ic_berita),
             MenuModel(3, "Kontak Darurat", R.drawable.ic_kontakdarurat),
-            MenuModel(4, "Cek Lokasi", R.drawable.ic_lapor),
+            MenuModel(4, "Pajak", R.drawable.ic_pajak),
             MenuModel(5, "Lainnya", R.drawable.ic_lainnya) // Gunakan ikon titik-titik (ic_lainnya)
         )
 
