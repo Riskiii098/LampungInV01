@@ -17,11 +17,15 @@ class ActivityFragment : Fragment() {
     private val binding get() = _binding!!
 
     // State tab saat ini
-    private var currentTab = 0 
+    private var currentTab = TAB_LAPORAN
+    private var currentDisimpanSubTab = SUB_TAB_BERITA
 
     companion object {
         const val TAB_LAPORAN = 0
         const val TAB_DISIMPAN = 1
+        
+        const val SUB_TAB_BERITA = 0
+        const val SUB_TAB_LAPORAN = 1
     }
 
     override fun onCreateView(
@@ -49,8 +53,23 @@ class ActivityFragment : Fragment() {
 
     private fun setupListeners() {
         binding.layoutLaporanContent.cardCekLaporan.setOnClickListener {
-            val intent = Intent(requireContext(), RiwayatLaporanActivity::class.java)
+            val countText = binding.layoutLaporanContent.tvStatTotalDibuat.text.toString()
+            val count = countText.toIntOrNull() ?: 0
+            
+            val intent = if (count > 0) {
+                Intent(requireContext(), RiwayatLaporanActivity::class.java)
+            } else {
+                Intent(requireContext(), EmptyHistoryActivity::class.java)
+            }
             startActivity(intent)
+        }
+
+        binding.btnFilterBerita.setOnClickListener {
+            switchDisimpanSubTab(SUB_TAB_BERITA)
+        }
+
+        binding.btnFilterLaporan.setOnClickListener {
+            switchDisimpanSubTab(SUB_TAB_LAPORAN)
         }
     }
 
@@ -82,7 +101,7 @@ class ActivityFragment : Fragment() {
             
             // Ubah konten
             binding.layoutLaporanContent.root.visibility = View.VISIBLE
-            binding.tvDisimpanPlaceholder.visibility = View.GONE
+            binding.layoutDisimpanContent.visibility = View.GONE
 
         } else {
             // UI Tab Laporan Inaktif
@@ -97,7 +116,43 @@ class ActivityFragment : Fragment() {
             
             // Ubah konten
             binding.layoutLaporanContent.root.visibility = View.GONE
-            binding.tvDisimpanPlaceholder.visibility = View.VISIBLE
+            binding.layoutDisimpanContent.visibility = View.VISIBLE
+            
+            // Pastikan subtab default benar saat pertama kali dibuka
+            switchDisimpanSubTab(currentDisimpanSubTab)
+        }
+    }
+
+    private fun switchDisimpanSubTab(subTabIndex: Int) {
+        currentDisimpanSubTab = subTabIndex
+        
+        // Safety check to ensure the views are available and we are on the right tab
+        if (currentTab != TAB_DISIMPAN) return
+        
+        if (subTabIndex == SUB_TAB_BERITA) {
+            // Berita Aktif
+            binding.btnFilterBerita.setBackgroundResource(R.drawable.bg_black_rounded_50)
+            binding.btnFilterBerita.setTextColor(Color.WHITE)
+            
+            // Laporan Inaktif
+            binding.btnFilterLaporan.setBackgroundResource(R.drawable.bg_gray_rounded_50)
+            binding.btnFilterLaporan.setTextColor(Color.BLACK)
+            
+            // Tampilan Konten
+            binding.layoutEmptyBerita.visibility = View.VISIBLE
+            binding.layoutEmptyLaporanWarga.visibility = View.GONE
+        } else {
+            // Berita Inaktif
+            binding.btnFilterBerita.setBackgroundResource(R.drawable.bg_gray_rounded_50)
+            binding.btnFilterBerita.setTextColor(Color.BLACK)
+            
+            // Laporan Aktif
+            binding.btnFilterLaporan.setBackgroundResource(R.drawable.bg_black_rounded_50)
+            binding.btnFilterLaporan.setTextColor(Color.WHITE)
+            
+            // Tampilan Konten
+            binding.layoutEmptyBerita.visibility = View.GONE
+            binding.layoutEmptyLaporanWarga.visibility = View.VISIBLE
         }
     }
 

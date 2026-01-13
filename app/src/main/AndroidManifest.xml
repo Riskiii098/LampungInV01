@@ -31,6 +31,7 @@
         <activity android:name=".RiwayatLaporanActivity" />
         <activity android:name=".DetailRiwayatActivity" />
         <activity android:name=".ProgressLaporanActivity" />
+        <activity android:name=".EmptyHistoryActivity" />
         
     </application>
 

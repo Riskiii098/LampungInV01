@@ -50,7 +50,7 @@ class ActivitySimulatedHistory : AppCompatActivity() {
         binding.indicatorDisimpan.visibility = View.INVISIBLE
 
         binding.layoutLaporanContent.root.visibility = View.VISIBLE
-        binding.tvDisimpanPlaceholder.visibility = View.GONE
+        binding.layoutDisimpanContent.visibility = View.GONE
     }
 
     private fun updateData() {

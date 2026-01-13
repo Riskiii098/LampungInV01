@@ -9,5 +9,5 @@
     android:paddingHorizontal="16dp"
     android:paddingVertical="10dp"
     android:text="Terjadi kerusakan pada..."
-    android:textColor="#F8C300"
+    android:textColor="@color/black"
     android:textSize="14sp" />
