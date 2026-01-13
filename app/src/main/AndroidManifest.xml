@@ -30,6 +30,7 @@
         <activity android:name=".ActivitySimulatedHistory" />
         <activity android:name=".RiwayatLaporanActivity" />
         <activity android:name=".DetailRiwayatActivity" />
+        <activity android:name=".ProgressLaporanActivity" />
         
     </application>
 

@@ -1,54 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/soft_yellow_white"
-    android:fitsSystemWindows="true">
+    android:fitsSystemWindows="true"
+    android:fillViewport="true">
 
-    <!-- Header Image -->
-    <ImageView
-        android:id="@+id/iv_header_image"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="240dp"
-        android:layout_marginTop="32dp"
-        android:src="@drawable/jalanan2"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toTopOf="parent"/>
+        android:layout_height="wrap_content">
 
-    <!-- Back Button -->
-    <ImageView
-        android:id="@+id/iv_back"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="48dp"
-        android:src="@drawable/ic_back_arrow"
-        app:tint="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        <!-- Header Image -->
+        <ImageView
+            android:id="@+id/iv_header_image"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:layout_marginTop="50dp"
+            android:src="@drawable/jalanan2"
+            android:scaleType="centerCrop"
+            app:layout_constraintTop_toTopOf="parent"/>
 
-    <!-- Content Body (Overlapping Image) -->
-    <!-- Background is now same as home (soft_yellow_white) with rounded top -->
-    <androidx.core.widget.NestedScrollView
-        android:id="@+id/scroll_content"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="-20dp"
-        android:background="@drawable/bg_home_top_rounded_15"
-        app:layout_constraintTop_toBottomOf="@id/iv_header_image"
-        app:layout_constraintBottom_toBottomOf="parent">
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/iv_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="64dp"
+            android:src="@drawable/ic_back_arrow"
+            app:tint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
+        <!-- Content Body (Overlapping Image) -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
+            android:background="@drawable/bg_home_top_rounded_15"
+            android:paddingHorizontal="0dp"
+            android:paddingTop="0dp"
             android:paddingBottom="24dp"
-            android:clipToPadding="false">
+            android:layout_marginTop="-20dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_header_image">
 
-            <!-- Info Card (Full Width / Edge-to-Edge) -->
-            <!-- Aligned to top (marginTop="0"), Radius 15dp on all sides -->
+            <!-- Info Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -63,34 +61,38 @@
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
                     android:baselineAligned="false"
+                    android:gravity="center_vertical"
                     android:paddingVertical="16dp"
-                    android:paddingHorizontal="24dp">
+                    android:paddingHorizontal="16dp">
 
-                    <!-- Left: ID Laporan -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="1.2"
                         android:orientation="vertical"
-                        android:gravity="start|center_vertical">
-                        <TextView
+                        android:gravity="center">
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="ID Laporan"
-                            android:textSize="10sp"
-                            android:textColor="#757575"/>
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="2283746192"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:textStyle="bold"
-                            android:maxLines="1"
-                            android:ellipsize="end"/>
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ID Laporan"
+                                android:textSize="12sp"
+                                android:textColor="#757575"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="2283746192"
+                                android:textSize="14sp"
+                                android:textColor="@color/black"
+                                android:textStyle="bold"
+                                android:maxLines="1"
+                                android:ellipsize="end"/>
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Divider -->
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -98,29 +100,35 @@
                         android:layout_marginVertical="2dp"
                         android:layout_marginHorizontal="8dp"/>
 
-                    <!-- Center: Status -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1.5"
                         android:orientation="vertical"
                         android:gravity="center">
-                        <ImageView
-                            android:layout_width="20dp"
-                            android:layout_height="20dp"
-                            android:src="@drawable/bg_circle_indicator"
-                            app:tint="#FFD000"/>
-                        <TextView
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Menunggu Verifikasi"
-                            android:textSize="11sp"
-                            android:textColor="@color/black"
-                            android:textAlignment="center"
-                            android:layout_marginTop="2dp"/>
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical">
+                            <ImageView
+                                android:layout_width="12dp"
+                                android:layout_height="12dp"
+                                android:src="@drawable/bg_circle_indicator"
+                                app:tint="#FFD000"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Menunggu Verifikasi"
+                                android:textSize="12sp"
+                                android:textColor="@color/black"
+                                android:layout_marginStart="6dp"
+                                android:textAlignment="viewStart"
+                                android:includeFontPadding="false"
+                                android:gravity="center_vertical"/>
+                        </LinearLayout>
                     </LinearLayout>
 
-                    <!-- Divider -->
                     <View
                         android:layout_width="1dp"
                         android:layout_height="match_parent"
@@ -128,13 +136,12 @@
                         android:layout_marginVertical="2dp"
                         android:layout_marginHorizontal="8dp"/>
 
-                    <!-- Right: Actions -->
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
+                        android:layout_weight="0.8"
                         android:orientation="horizontal"
-                        android:gravity="end|center_vertical">
+                        android:gravity="center">
                         <ImageView
                             android:layout_width="20dp"
                             android:layout_height="20dp"
@@ -151,18 +158,507 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Description -->
-            <TextView
+            <!-- Report Details Box -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Ada kerusakan jalan di perempatan, tolong segera diperbaiki"
-                android:textColor="@color/black"
-                android:textSize="14sp"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_stroke_gray_rounded"
+                android:padding="16dp"
                 android:layout_marginTop="24dp"
-                android:layout_marginHorizontal="24dp"/>
+                android:layout_marginHorizontal="24dp">
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Permasalahan:"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ada kerusakan jalan di perempatan, tolong segera diperbaiki"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#424242"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kategori:"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kerusakan Infrastruktur"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#424242"
+                    android:layout_marginTop="4dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lokasi:"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="H755+G83 kantor gubernur, Talang, kec. Telukbetung Selatan, Kota Bandar Lampung, Lampung 35221, Indonesia"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#424242"
+                    android:layout_marginTop="4dp"
+                    android:lineSpacingExtra="2dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detail Alamat:"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="12dp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="-"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="#424242"
+                    android:layout_marginTop="4dp"/>
+            </LinearLayout>
+
+            <!-- Progress Laporan Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_stroke_gray_rounded"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Progress Laporan"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="16dp"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <!-- Vertical Line -->
+                    <View
+                        android:id="@+id/timeline_line"
+                        android:layout_width="2dp"
+                        android:layout_height="0dp"
+                        android:background="#E0E0E0"
+                        app:layout_constraintTop_toTopOf="@id/dot_1"
+                        app:layout_constraintBottom_toBottomOf="@id/bubble_3"
+                        app:layout_constraintStart_toStartOf="@id/dot_1"
+                        app:layout_constraintEnd_toEndOf="@id/dot_1"/>
+
+                    <!-- Item 1: Menunggu Verifikasi -->
+                    <View
+                        android:id="@+id/dot_1"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:backgroundTint="#FFD000"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"/>
+
+                    <TextView
+                        android:id="@+id/title_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Menunggu Verifikasi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_1"
+                        app:layout_constraintTop_toTopOf="@id/dot_1"/>
+
+                    <TextView
+                        android:id="@+id/desc_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_1"/>
+
+                    <TextView
+                        android:id="@+id/date_1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="13 Jan 2026 | 10.20 WIB"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/desc_1"/>
+
+                    <LinearLayout
+                        android:id="@+id/sender_container_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_1"
+                        app:layout_constraintTop_toBottomOf="@id/date_1">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#9E9E9E"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ratu Berliana"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#616161"
+                            android:layout_marginStart="8dp"/>
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/bg_circle_indicator"
+                            android:backgroundTint="#757575"
+                            android:layout_marginHorizontal="6dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pengirim"
+                            android:textSize="12sp"
+                            android:textColor="#9E9E9E"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bubble_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Terimakasih sudah ditindak lanjuti"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:background="@drawable/bg_chat_bubble"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="40dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_1"
+                        app:layout_constraintTop_toBottomOf="@id/sender_container_1"/>
+
+                    <!-- Item 2: Laporan Diterima -->
+                    <View
+                        android:id="@+id/dot_2"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:backgroundTint="#4BD85B"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/bubble_1"/>
+
+                    <TextView
+                        android:id="@+id/title_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Laporan Diterima"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_2"
+                        app:layout_constraintTop_toTopOf="@id/dot_2"/>
+
+                    <TextView
+                        android:id="@+id/desc_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Laporan diterima dan akan diarahkan ke Instansi terkait"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_2"/>
+
+                    <TextView
+                        android:id="@+id/date_2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="13 Jan 2026 | 10.20 WIB"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/desc_2"/>
+
+                    <LinearLayout
+                        android:id="@+id/sender_container_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_2"
+                        app:layout_constraintTop_toBottomOf="@id/date_2">
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#9E9E9E"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ratu Berliana"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#616161"
+                            android:layout_marginStart="8dp"/>
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/bg_circle_indicator"
+                            android:backgroundTint="#757575"
+                            android:layout_marginHorizontal="6dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pengirim"
+                            android:textSize="12sp"
+                            android:textColor="#9E9E9E"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bubble_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ya, Baik, segera."
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:background="@drawable/bg_chat_bubble"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="40dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_2"
+                        app:layout_constraintTop_toBottomOf="@id/sender_container_2"/>
+
+                    <!-- Item 3: Diteruskan ke Instansi -->
+                    <View
+                        android:id="@+id/dot_3"
+                        android:layout_width="12dp"
+                        android:layout_height="12dp"
+                        android:background="@drawable/bg_timeline_dot"
+                        android:backgroundTint="#302BB1"
+                        android:layout_marginTop="32dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/bubble_2"/>
+
+                    <TextView
+                        android:id="@+id/title_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Diteruskan ke Instansi"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_3"
+                        app:layout_constraintTop_toTopOf="@id/dot_3"/>
+
+                    <TextView
+                        android:id="@+id/desc_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/title_3"/>
+                    
+                    <TextView
+                        android:id="@+id/date_3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="13 Jan 2026 | 10.20 WIB"
+                        android:textSize="11sp"
+                        android:textColor="#9E9E9E"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_3"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/desc_3"/>
+
+                    <LinearLayout
+                        android:id="@+id/sender_container_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginStart="16dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_3"
+                        app:layout_constraintTop_toBottomOf="@id/date_3">
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_profile"
+                            app:tint="#9E9E9E"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ratu Berliana"
+                            android:textSize="12sp"
+                            android:textStyle="bold"
+                            android:textColor="#616161"
+                            android:layout_marginStart="8dp"/>
+                        <View
+                            android:layout_width="4dp"
+                            android:layout_height="4dp"
+                            android:background="@drawable/bg_circle_indicator"
+                            android:backgroundTint="#757575"
+                            android:layout_marginHorizontal="6dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pengirim"
+                            android:textSize="12sp"
+                            android:textColor="#9E9E9E"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/bubble_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ya, Baik, segera."
+                        android:textSize="12sp"
+                        android:textColor="#424242"
+                        android:background="@drawable/bg_chat_bubble"
+                        android:paddingHorizontal="16dp"
+                        android:paddingVertical="10dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="40dp"
+                        app:layout_constraintStart_toEndOf="@id/dot_3"
+                        app:layout_constraintTop_toBottomOf="@id/sender_container_3"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <TextView
+                    android:id="@+id/tv_selengkapnya"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Selengkapnya"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="#F8C300"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginBottom="8dp"/>
+            </LinearLayout>
+
+            <!-- Diskusi Laporan Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_white_stroke_gray_rounded"
+                android:padding="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginBottom="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Diskusi Laporan"
+                    android:textSize="18sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black"
+                    android:layout_gravity="start"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Belum ada diskusi laporan"
+                    android:textSize="16sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="#9E9E9E"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="48dp"
+                    android:layout_marginBottom="48dp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#E0E0E0"
+                    android:layout_marginBottom="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:src="@drawable/ic_profile"
+                        app:tint="#9E9E9E"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@drawable/bg_white_stroke_gray_rounded"
+                        android:paddingHorizontal="12dp"
+                        android:paddingVertical="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ketik komentar..."
+                            android:textSize="14sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="#9E9E9E"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_send"
+                        app:tint="#F8C300" />
+                </LinearLayout>
+            </LinearLayout>
         </LinearLayout>
-
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
