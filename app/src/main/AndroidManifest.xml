@@ -32,6 +32,7 @@
         <activity android:name=".DetailRiwayatActivity" />
         <activity android:name=".ProgressLaporanActivity" />
         <activity android:name=".EmptyHistoryActivity" />
+        <activity android:name=".NotificationDetailActivity" />
         
     </application>
 
