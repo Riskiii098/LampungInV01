@@ -64,14 +64,14 @@
                 android:textColor="@android:color/black"
                 android:textSize="20sp" />
 
-            <!-- Image -->
+            <!-- Image - Menggunakan jalanan2 untuk mengetes stabilitas -->
             <ImageView
                 android:id="@+id/ivDetailImage"
                 android:layout_width="match_parent"
                 android:layout_height="220dp"
                 android:layout_marginTop="20dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/jalanan2" />
+                android:src="@drawable/banjir5" />
 
             <!-- Description Paragraf 1 -->
             <TextView
