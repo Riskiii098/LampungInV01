@@ -33,6 +33,8 @@
         <activity android:name=".ProgressLaporanActivity" />
         <activity android:name=".EmptyHistoryActivity" />
         <activity android:name=".NotificationDetailActivity" />
+        <activity android:name=".FeaturedActivity" />
+        <activity android:name=".CitizenReportActivity" />
         
     </application>
 

@@ -54,7 +54,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun handleIntent(intent: Intent?) {
-        if (intent?.getBooleanExtra("OPEN_REPORT", false) == true) {
+        val targetTab = intent?.getIntExtra("TARGET_TAB", -1) ?: -1
+        val simulateData = intent?.getBooleanExtra("SIMULATE_DATA", false) ?: false
+
+        if (targetTab != -1) {
+            val fragment = when (targetTab) {
+                1 -> {
+                    val frag = ActivityFragment()
+                    if (simulateData) {
+                        val bundle = Bundle()
+                        bundle.putBoolean("SIMULATE_DATA", true)
+                        frag.arguments = bundle
+                    }
+                    frag
+                }
+                2 -> ReportFragment()
+                else -> HomeFragment()
+            }
+            loadFragment(fragment)
+            updateBottomNavUI(targetTab)
+        } else if (intent?.getBooleanExtra("OPEN_REPORT", false) == true) {
             loadFragment(ReportFragment())
             updateBottomNavUI(2)
         }
@@ -90,6 +109,17 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
             .commit()
+    }
+
+    fun switchToActivityTab(simulateData: Boolean = false) {
+        val fragment = ActivityFragment()
+        if (simulateData) {
+            val bundle = Bundle()
+            bundle.putBoolean("SIMULATE_DATA", true)
+            fragment.arguments = bundle
+        }
+        loadFragment(fragment)
+        updateBottomNavUI(1) // Index 1 is Activity Tab
     }
 
     fun updateBottomNavUI(index: Int) {

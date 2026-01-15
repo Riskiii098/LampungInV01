@@ -93,11 +93,19 @@ class ReportSuccessActivity : AppCompatActivity() {
             finish()
         }
 
-        // Tombol Cek Status
-        btnCheckStatus.setOnClickListener {
-            val intent = Intent(this, ActivitySimulatedHistory::class.java)
+        // Fungsi untuk ke Tab Aktivitas dengan data simulasi
+        fun goToActivityTab() {
+            val intent = Intent(this, MainActivity::class.java)
+            intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
+            intent.putExtra("TARGET_TAB", 1)
+            intent.putExtra("SIMULATE_DATA", true)
             startActivity(intent)
             finish()
+        }
+
+        // Tombol Cek Status
+        btnCheckStatus.setOnClickListener {
+            goToActivityTab()
         }
 
         // Tombol Kembali
@@ -107,9 +115,7 @@ class ReportSuccessActivity : AppCompatActivity() {
 
         // Tombol Close (X)
         ivClose.setOnClickListener {
-            val intent = Intent(this, ActivitySimulatedHistory::class.java)
-            startActivity(intent)
-            finish()
+            goToActivityTab()
         }
     }
 }

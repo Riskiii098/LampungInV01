@@ -62,8 +62,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_UNGGULAN))
                 }
             } else if (selectedMenu.title == "Laporan") {
-                val intent = Intent(requireContext(), MakeReportActivity::class.java)
-                startActivity(intent)
+                try {
+                    val intent = Intent(requireContext(), FeaturedActivity::class.java)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
             }

@@ -46,6 +46,24 @@ class ActivityFragment : Fragment() {
             insets
         }
 
+        // Cek apakah ada request simulasi data
+        val simulateData = arguments?.getBoolean("SIMULATE_DATA", false) ?: false
+        if (simulateData) {
+            // Update Angka Statistik
+            binding.layoutLaporanContent.tvStatTotalDibuat.text = "1"
+            binding.layoutLaporanContent.tvStatusMenungguCount.text = "1"
+
+            // Tampilkan Kartu Laporan (Menunggu Verifikasi)
+            binding.layoutLaporanContent.tvEmptyLaporan.visibility = View.GONE
+            binding.layoutLaporanContent.layoutFilledLaporan.visibility = View.VISIBLE
+        } else {
+            // Reset ke Default (Kosong) jika tidak ada simulasi
+            binding.layoutLaporanContent.tvStatTotalDibuat.text = "0"
+            binding.layoutLaporanContent.tvStatusMenungguCount.text = "0"
+            binding.layoutLaporanContent.tvEmptyLaporan.visibility = View.VISIBLE
+            binding.layoutLaporanContent.layoutFilledLaporan.visibility = View.GONE
+        }
+
         setupTabs()
         setupListeners()
         switchTab(TAB_LAPORAN) // Default tab
