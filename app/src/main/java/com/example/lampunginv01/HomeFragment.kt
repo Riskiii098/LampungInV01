@@ -40,10 +40,18 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
 
         setupMenuGrid()
+        setupSpecialMenu()
         setupBannerSlider()
         setupTestimonials()
         setupNewsCategories()
         setupRecommendations()
+    }
+
+    private fun setupSpecialMenu() {
+        binding.btnSpecialMenu.setOnClickListener {
+            val intent = Intent(requireContext(), MenuSpesialActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun setupMenuGrid() {

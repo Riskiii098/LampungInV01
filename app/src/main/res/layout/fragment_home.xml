@@ -232,6 +232,22 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_recommendation_title" />
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_special_menu"
+            android:layout_width="240dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Menu Spesial"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:backgroundTint="#F8C300"
+            app:cornerRadius="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rv_recommendations"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.core.widget.NestedScrollView>
