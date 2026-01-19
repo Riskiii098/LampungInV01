@@ -77,6 +77,14 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
                     e.printStackTrace()
                     Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
                 }
+            } else if (selectedMenu.title == "Pajak") {
+                try {
+                    val intent = Intent(requireContext(), PajakActivity::class.java)
+                    startActivity(intent)
+                } catch (e: Exception) {
+                    e.printStackTrace()
+                    Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                }
             } else {
                 Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
             }

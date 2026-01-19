@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_yellow_white"
+    tools:context=".PajakActivity">
+
+    <!-- Header Section (Matching MakeReportActivity style) -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back_arrow"
+        app:tint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Cek &amp; Bayar Pajak"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="24dp">
+
+            <!-- Image -->
+            <ImageView
+                android:id="@+id/iv_header"
+                android:layout_width="0dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="24dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/gambarpajak"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Overlapping Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card_overlap"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="0dp"
+                android:translationY="-30dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="4dp"
+                app:shapeAppearanceOverlay="@style/ShapeAppearance.PajakCard"
+                app:layout_constraintTop_toBottomOf="@id/iv_header"
+                app:layout_constraintBottom_toBottomOf="@id/iv_header"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <!-- Profile Icon (Grey) -->
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_profile"
+                        app:tint="@android:color/darker_gray"
+                        android:scaleType="fitCenter" />
+
+                    <!-- Right Side -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="12dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ratu Berliana R.M."
+                            android:textSize="16sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@android:color/black"/>
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btn_riwayat_pajak"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Riwayat Bayar Pajak"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-medium"
+                            android:textColor="@color/white"
+                            android:backgroundTint="#F8C300"
+                            app:cornerRadius="8dp"
+                            android:layout_marginTop="4dp"
+                            android:minHeight="0dp"
+                            android:paddingVertical="4dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Title: Pilihan Layanan Pajak -->
+            <TextView
+                android:id="@+id/tv_service_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pilihan Layanan Pajak"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginTop="16dp"
+                android:layout_marginStart="24dp"
+                app:layout_constraintTop_toBottomOf="@id/card_overlap"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_pajak_services"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_service_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:listitem="@layout/item_pajak_service"/>
+                
+            <!-- New Buttons -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_panduan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="16dp"
+                android:text="Cek Kode Bayar"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                app:icon="@drawable/cetakpajak"
+                app:iconTint="@color/black"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="8dp"
+                app:elevation="2dp"
+                app:layout_constraintTop_toBottomOf="@id/rv_pajak_services"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_bantuan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="32dp"
+                android:layout_marginTop="12dp"
+                android:text="Lacak Permohonan Pajak"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="14sp"
+                app:icon="@drawable/caripajak"
+                app:iconTint="@color/black"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/white"
+                app:strokeColor="@color/black"
+                app:strokeWidth="0.5dp"
+                app:cornerRadius="8dp"
+                app:elevation="2dp"
+                android:layout_marginBottom="40dp"
+                app:layout_constraintTop_toBottomOf="@id/btn_panduan"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
