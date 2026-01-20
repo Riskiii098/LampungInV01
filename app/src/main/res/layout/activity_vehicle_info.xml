@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Header Section (Fixed at Top) -->
+    <ImageView
+        android:id="@+id/iv_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black" 
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Informasi Kendaraan"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/iv_back"
+        app:layout_constraintStart_toEndOf="@id/iv_back"
+        app:layout_constraintTop_toTopOf="@id/iv_back" />
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/iv_back"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!-- Status Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/status_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/bg_light_green_rounded_8"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tv_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Status"
+                    android:fontFamily="sans-serif"
+                    android:textSize="12sp"
+                    android:textColor="#000000"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <ImageView
+                    android:id="@+id/iv_status_icon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/suksesijo"
+                    app:tint="#2E7D32"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status_label"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Pajak sudah masuk masa pembayaran"
+                    android:fontFamily="sans-serif"
+                    android:textSize="16sp"
+                    android:textColor="#000000"
+                    android:layout_marginStart="8dp"
+                    app:layout_constraintStart_toEndOf="@id/iv_status_icon"
+                    app:layout_constraintBottom_toBottomOf="@id/iv_status_icon"
+                    app:layout_constraintTop_toTopOf="@id/iv_status_icon"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Due Date Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp">
+
+                <ImageView
+                    android:id="@+id/iv_date_icon"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/informasikecil"
+                    app:tint="@android:color/darker_gray" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Jatuh tempo pada 20 Februari 2026"
+                    android:fontFamily="sans-serif-light"
+                    android:textSize="16sp"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginStart="8dp" />
+            </LinearLayout>
+
+            <!-- Vehicle Details Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rincian Kendaraan"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/bg_dashed_line_gray"
+                        android:layerType="software" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="2"
+                        android:shrinkColumns="2">
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Nomor Polisi" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="BE 1234 AB" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Nama Pemilik" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Ratu Berliana" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+                        
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="NIK/TDP/NIB/\nKITAS/KITAB" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="3255012301990001" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Alamat" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Jl. Teuku Umar No. 45, Kota Bandar Lampung, Lampung" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Merk" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Honda" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Tipe" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Vario 160 CBS" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Tahun Pembuatan" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="2021" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                        <TableRow android:layout_marginBottom="8dp" android:gravity="top">
+                            <TextView android:text="Nomor Rangka" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="MH1KF2117MK123456" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Payment Details Card (New) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="16dp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="12dp"
+                app:contentPadding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Rincian Pembayaran"
+                        android:fontFamily="sans-serif-medium"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginVertical="16dp"
+                        android:background="@drawable/bg_dashed_line_gray"
+                        android:layerType="software" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="2">
+
+                        <!-- PKB Pokok -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="PKB Pokok" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 300.000" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Opsen PKB -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="Opsen PKB" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 150.000" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- SWDKLLJ -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="SWDKLLJ" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 35.000" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Denda PKB -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="Denda PKB" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 25.000" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Denda Opsen PKB -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="Denda Opsen PKB" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 0" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Denda SWDKLLJ -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="Denda SWDKLLJ" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 0" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Biaya Administrasi -->
+                        <TableRow android:layout_marginBottom="8dp">
+                            <TextView android:text="Biaya Administrasi" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text=":" android:paddingHorizontal="8dp" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black"/>
+                            <TextView android:text="Rp 2.500" android:textSize="16sp" android:fontFamily="sans-serif" android:textColor="@color/black" android:gravity="end"/>
+                        </TableRow>
+
+                        <!-- Divider Row -->
+                        <TableRow>
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:layout_marginVertical="16dp"
+                                android:background="@drawable/bg_dashed_line_gray"
+                                android:layerType="software"
+                                android:layout_span="3" />
+                        </TableRow>
+
+                        <!-- Total Pembayaran Row -->
+                        <TableRow>
+                            <TextView
+                                android:text="Total Pembayaran"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:text=":"
+                                android:paddingHorizontal="8dp"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:textColor="@color/black"/>
+                            <TextView
+                                android:text="Rp 512.500"
+                                android:textSize="16sp"
+                                android:fontFamily="sans-serif-bold"
+                                android:textColor="@color/black"
+                                android:gravity="end"/>
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Pay Button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_pay_now"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="24dp"
+                android:layout_marginTop="24dp"
+                android:text="Bayar Sekarang"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#F8C300"
+                app:cornerRadius="8dp"
+                android:paddingVertical="12dp"/>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

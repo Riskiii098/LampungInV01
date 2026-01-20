@@ -39,6 +39,7 @@
         <activity android:name=".FeaturedActivity" />
         <activity android:name=".CitizenReportActivity" />
         <activity android:name=".PajakActivity" />
+        <activity android:name=".VehicleInfoActivity" />
         
     </application>
 

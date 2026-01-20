@@ -8,6 +8,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class PajakActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,10 +40,32 @@ class PajakActivity : AppCompatActivity() {
         )
 
         val adapter = PajakServiceAdapter(serviceList) { item ->
-            Toast.makeText(this, "Clicked: ${item.title}", Toast.LENGTH_SHORT).show()
+            if (item.id == 1) {
+                showCekPajakBottomSheet()
+            } else {
+                Toast.makeText(this, "Fitur ini belum tersedia untuk ${item.title}", Toast.LENGTH_SHORT).show()
+            }
         }
 
         rvServices.layoutManager = LinearLayoutManager(this)
         rvServices.adapter = adapter
+    }
+
+    private fun showCekPajakBottomSheet() {
+        val dialog = BottomSheetDialog(this)
+        val view = layoutInflater.inflate(R.layout.bottom_sheet_cek_pajak, null)
+        dialog.setContentView(view)
+
+        view.findViewById<android.view.View>(R.id.btn_close).setOnClickListener {
+            dialog.dismiss()
+        }
+
+        view.findViewById<android.view.View>(R.id.btn_cek_pajak_submit).setOnClickListener {
+            dialog.dismiss()
+            val intent = android.content.Intent(this, VehicleInfoActivity::class.java)
+            startActivity(intent)
+        }
+
+        dialog.show()
     }
 }

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet_rounded_10"
+    android:paddingBottom="24dp">
+
+    <!-- Close Button -->
+    <ImageView
+        android:id="@+id/btn_close"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_close"
+        app:tint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/tv_title_sheet"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Masukkan Nomor Polisi Kendaraan"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_close"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/iv_example"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/gambarplat"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_sheet"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Title: Masukkan 5 digit terakhit Nomor Rangka -->
+    <TextView
+        android:id="@+id/tv_nomor_rangka"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Masukkan 5 digit terakhir Nomor Rangka"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/iv_example"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 5 Boxes for Nomor Rangka -->
+    <LinearLayout
+        android:id="@+id/container_rangka_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="32dp"
+        app:layout_constraintTop_toBottomOf="@id/tv_nomor_rangka"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <EditText
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+            android:inputType="number"
+            android:maxLength="1"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+    <!-- Title: Masukkan NIK Pemilik -->
+    <TextView
+        android:id="@+id/tv_nik_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Masukkan NIK Pemilik"
+        android:fontFamily="sans-serif-light"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:layout_marginTop="24dp"
+        android:layout_marginHorizontal="24dp"
+        app:layout_constraintTop_toBottomOf="@id/container_rangka_input"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Input NIK -->
+    <EditText
+        android:id="@+id/et_nik"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginHorizontal="32dp"
+        android:background="@drawable/bg_white_stroke_black_0_5_rounded"
+        android:inputType="number"
+        android:maxLength="16"
+        android:paddingHorizontal="16dp"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/tv_nik_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Button Cek Pajak -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cek_pajak_submit"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="32dp"
+        android:layout_marginTop="32dp"
+        android:text="Cek Pajak"
+        android:textColor="@android:color/white"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="16sp"
+        app:backgroundTint="#F8C300"
+        app:cornerRadius="8dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintTop_toBottomOf="@id/et_nik"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
