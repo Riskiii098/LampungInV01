@@ -39,6 +39,8 @@
         <activity android:name=".FeaturedActivity" />
         <activity android:name=".CitizenReportActivity" />
         <activity android:name=".PajakActivity" />
+        <activity android:name=".BeritaActivity" />
+        <activity android:name=".PaymentMethodActivity" />
         <activity android:name=".VehicleInfoActivity" />
         
     </application>

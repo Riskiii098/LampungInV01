@@ -16,6 +16,12 @@ class VehicleInfoActivity : AppCompatActivity() {
             onBackPressedDispatcher.onBackPressed()
         }
 
+        val btnPayNow = findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_pay_now)
+        btnPayNow.setOnClickListener {
+            val intent = android.content.Intent(this, PaymentMethodActivity::class.java)
+            startActivity(intent)
+        }
+
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(android.R.id.content)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)

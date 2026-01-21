@@ -40,18 +40,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
 
         setupMenuGrid()
-        setupSpecialMenu()
         setupBannerSlider()
         setupTestimonials()
-        setupNewsCategories()
         setupRecommendations()
-    }
-
-    private fun setupSpecialMenu() {
-        binding.btnSpecialMenu.setOnClickListener {
-            val intent = Intent(requireContext(), MenuSpesialActivity::class.java)
-            startActivity(intent)
-        }
     }
 
     private fun setupMenuGrid() {
@@ -67,7 +58,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         val menuAdapter = MenuAdapter(menuList) { selectedMenu ->
             if (selectedMenu.title == "Lainnya") {
                 if (activity is MainActivity) {
-                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_UNGGULAN))
+                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
                 }
             } else if (selectedMenu.title == "Laporan") {
                 try {
@@ -237,33 +228,6 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
-    private fun setupNewsCategories() {
-        val categoryList = listOf(
-            NewsCategoryModel(1, "Kesehatan", R.drawable.ic_kt5),
-            NewsCategoryModel(2, "Darurat & Keamanan", R.drawable.ic_kt2),
-            NewsCategoryModel(3, "Aspirasi & Pengaduan", R.drawable.ic_kt1),
-            NewsCategoryModel(4, "Fasilitas Umum", R.drawable.ic_kt7),
-            NewsCategoryModel(5, "Administrasi Kependudukan", R.drawable.ic_kt3),
-            NewsCategoryModel(6, "Semua Kategori", R.drawable.kt_lainnya)
-        )
-
-        val categoryAdapter = NewsCategoryAdapter(categoryList) { category ->
-            if (category.title == "Semua Kategori") {
-                if (activity is MainActivity) {
-                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
-                }
-            } else {
-                Toast.makeText(requireContext(), "Kategori: ${category.title}", Toast.LENGTH_SHORT).show()
-            }
-        }
-
-        binding.rvNewsCategories.apply {
-            layoutManager = GridLayoutManager(requireContext(), 2) // 2 kolom (kiri-kanan)
-            adapter = categoryAdapter
-            isNestedScrollingEnabled = false // Agar scroll menyatu dengan scrollview utama
-        }
-    }
-
     private fun setupRecommendations() {
         val recommendationList = listOf(
             RecommendationModel(
@@ -303,7 +267,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
     }
 
     override fun setupAction() {
-        // Handle action global lain jika ada
+        binding.tvSeeNews.setOnClickListener {
+            val intent = Intent(requireContext(), BeritaActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     override fun setupObserver() {
