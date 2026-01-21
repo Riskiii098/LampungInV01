@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".PaymentSuccessActivity">
+
+    <!-- Container for the animation elements to center them -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/animation_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.4">
+
+        <!-- Decorative Dots (Background) -->
+        <View
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/bg_circle_indicator"
+            android:backgroundTint="#F8C300"
+            android:translationX="-60dp"
+            android:translationY="-40dp"
+            app:layout_constraintStart_toStartOf="@id/img_center"
+            app:layout_constraintTop_toTopOf="@id/img_center" />
+
+        <View
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/bg_circle_indicator"
+            android:backgroundTint="#4CAF50"
+            android:translationX="50dp"
+            android:translationY="-30dp"
+            app:layout_constraintEnd_toEndOf="@id/img_center"
+            app:layout_constraintTop_toTopOf="@id/img_center" />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/bg_circle_indicator"
+            android:backgroundTint="#F8C300"
+            android:translationX="-80dp"
+            android:translationY="20dp"
+            app:layout_constraintStart_toStartOf="@id/img_left"
+            app:layout_constraintTop_toTopOf="@id/img_left" />
+
+        <View
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:background="@drawable/bg_circle_indicator"
+            android:backgroundTint="#4CAF50"
+            android:translationX="70dp"
+            android:translationY="10dp"
+            app:layout_constraintEnd_toEndOf="@id/img_right"
+            app:layout_constraintTop_toTopOf="@id/img_right" />
+
+        <!-- 
+           Reordered for Z-Index:
+           1. Left & Right (Back)
+           2. Center (Front)
+           Center image is now smaller and overlaps more (negative margin increased).
+        -->
+
+        <!-- Left Circle (Green) - Bottom Left -->
+        <ImageView
+            android:id="@+id/img_left"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="-55dp"
+            android:layout_marginEnd="-30dp"
+            android:src="@drawable/ceklis2"
+            app:layout_constraintEnd_toStartOf="@+id/img_center"
+            app:layout_constraintTop_toBottomOf="@+id/img_center"
+            app:layout_constraintHorizontal_bias="1.0" />
+
+        <!-- Right Circle (Green) - Bottom Right -->
+        <ImageView
+            android:id="@+id/img_right"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="-55dp"
+            android:layout_marginStart="-30dp"
+            android:src="@drawable/ceklis3"
+            app:layout_constraintStart_toEndOf="@+id/img_center"
+            app:layout_constraintTop_toBottomOf="@+id/img_center" />
+
+        <!-- Center Circle (Yellow) - Top of Pyramid (Placed last to be on top) -->
+        <ImageView
+            android:id="@+id/img_center"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ceklis1"
+            android:elevation="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Success Text -->
+    <TextView
+        android:id="@+id/tv_success"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:fontFamily="sans-serif-bold"
+        android:text="Pembayaran Berhasil!"
+        android:textColor="#F8C300"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/animation_container" />
+
+    <!-- Button Selesai -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="32dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Selesai"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:backgroundTint="#F8C300"
+        app:cornerRadius="8dp"
+        android:paddingVertical="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_yellow_white"
+    tools:context=".KodeQrisActivity">
+
+    <!-- Header Section -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back_arrow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"/>
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Kode QRIS"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="32dp"
+            android:gravity="center_horizontal">
+
+            <!-- Timer Section -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sisa Waktu"
+                android:fontFamily="sans-serif"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_timer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9 Menit : 59 Detik"
+                android:fontFamily="sans-serif-medium"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"/>
+
+            <!-- QRIS Image -->
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:src="@drawable/qr"
+                android:layout_marginTop="24dp"
+                android:scaleType="fitCenter"/>
+
+            <!-- Payment Method Detail -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="22dp"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Metode Pembayaran"
+                    android:fontFamily="sans-serif"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E0E0E0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/qris" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="QRIS"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:layout_marginStart="12dp"/>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Total Payment Detail -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingHorizontal="22dp"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Total Bayar"
+                    android:fontFamily="sans-serif"
+                    android:textSize="14sp"
+                    android:textColor="@color/black"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeWidth="1dp"
+                    app:strokeColor="#E0E0E0">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="12dp">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/duitkuning" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 512.500"
+                            android:fontFamily="sans-serif-bold"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:layout_marginStart="12dp"/>
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <!-- Status Check -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah Membayar?"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_refresh_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Perbarui Status Pembayaran"
+                android:fontFamily="sans-serif"
+                android:textSize="14sp"
+                android:textColor="#F8C300"
+                android:textStyle="bold"
+                android:layout_marginTop="4dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <!-- Instructions Expandable -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginTop="24dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="#E0E0E0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layout_instructions_header"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="12dp"
+                        android:background="?attr/selectableItemBackground">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/infokuning"/>
+                        
+                        <!-- Using generic icon for instructions, prompt says "gambar" -->
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Tata Cara Pembayaran"
+                            android:fontFamily="sans-serif"
+                            android:textColor="@color/black"
+                            android:textSize="14sp"
+                            android:layout_marginStart="12dp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_arrow_instructions"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/ic_arrow_down"
+                            app:tint="@color/black"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/layout_instructions_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="12dp"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="1. Buka aplikasi pembayaran yang mendukung QRIS.\n2. Pindai kode QR di atas.\n3. Periksa detail pembayaran.\n4. Konfirmasi pembayaran.\n5. Simpan bukti pembayaran."
+                            android:fontFamily="sans-serif"
+                            android:textSize="14sp"
+                            android:textColor="#666666"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Buttons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="22dp"
+                android:layout_marginTop="32dp">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_download_qris"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Download QRIS"
+                    android:textColor="@color/white"
+                    android:fontFamily="sans-serif-medium"
+                    android:textSize="14sp"
+                    app:backgroundTint="#F8C300"
+                    app:cornerRadius="8dp"
+                    android:paddingVertical="12dp"
+                    android:layout_marginBottom="16dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

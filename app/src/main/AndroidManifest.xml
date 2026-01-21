@@ -41,6 +41,8 @@
         <activity android:name=".PajakActivity" />
         <activity android:name=".BeritaActivity" />
         <activity android:name=".PaymentMethodActivity" />
+        <activity android:name=".KodeQrisActivity" />
+        <activity android:name=".PaymentSuccessActivity" />
         <activity android:name=".VehicleInfoActivity" />
         
     </application>

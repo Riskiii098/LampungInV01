@@ -56,6 +56,13 @@ class PaymentMethodActivity : AppCompatActivity() {
                 selectPaymentMethod(indicator)
             }
         }
+
+        binding.btnConfirmPay.setOnClickListener {
+            // Simplified logic: Direct navigation as requested
+            // In a real app, check if QRIS is selected: if (binding.radioInnerQris.visibility == View.VISIBLE) ...
+            val intent = android.content.Intent(this, KodeQrisActivity::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun selectPaymentMethod(selectedIndicator: View) {
