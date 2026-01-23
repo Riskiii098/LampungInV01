@@ -19,6 +19,11 @@ class PajakActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
+
+        findViewById<android.widget.Button>(R.id.btn_riwayat_pajak).setOnClickListener {
+            val intent = android.content.Intent(this, PaymentHistoryActivity::class.java)
+            startActivity(intent)
+        }
         
         setupRecyclerView()
 

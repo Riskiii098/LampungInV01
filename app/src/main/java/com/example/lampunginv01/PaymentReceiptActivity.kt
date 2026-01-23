@@ -18,5 +18,12 @@ class PaymentReceiptActivity : AppCompatActivity() {
         binding.btnClose.setOnClickListener {
             finish()
         }
+
+        binding.btnHome.setOnClickListener {
+            val intent = android.content.Intent(this, PajakActivity::class.java)
+            intent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP or android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
+            startActivity(intent)
+            finish()
+        }
     }
 }

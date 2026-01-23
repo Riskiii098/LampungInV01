@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fitsSystemWindows="true"
+    tools:context=".PaymentHistoryActivity">
+
+    <!-- Header -->
+    <ImageView
+        android:id="@+id/btn_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:src="@drawable/ic_back_arrow"
+        app:tint="@color/black"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="Riwayat Pembayaran"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+    <!-- History Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_history_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Status Dot -->
+            <View
+                android:id="@+id/status_dot"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_circle_indicator"
+                android:backgroundTint="#FF7010"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_status" />
+
+            <!-- Status Text -->
+            <TextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Menunggu Validasi"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/status_dot"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Lihat Detail -->
+            <TextView
+                android:id="@+id/tv_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lihat Detail"
+                android:textSize="12sp"
+                android:textColor="#F8C300"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Plate Number -->
+            <TextView
+                android:id="@+id/tv_nopol"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BE 1234 AB"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+            <!-- Tax Type -->
+            <TextView
+                android:id="@+id/tv_tax_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pajak Kendaraan Bermotor (Tahunan)"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nopol" />
+
+            <!-- Total Label -->
+            <TextView
+                android:id="@+id/tv_total_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Pembayaran:"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tax_type"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Total Value -->
+            <TextView
+                android:id="@+id/tv_total_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 535.500"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_label" />
+
+            <!-- Date (Aligned with Total Value) -->
+            <TextView
+                android:id="@+id/tv_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 September 2026"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_total_value"
+                app:layout_constraintBottom_toBottomOf="@id/tv_total_value"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- History Card 2 -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_history_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="2dp"
+        app:layout_constraintTop_toBottomOf="@id/card_history_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Status Dot -->
+            <View
+                android:id="@+id/status_dot_2"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:background="@drawable/bg_circle_indicator"
+                android:backgroundTint="#24C936"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="@id/tv_status_2" />
+
+            <!-- Status Text -->
+            <TextView
+                android:id="@+id/tv_status_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lunas"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="sans-serif"
+                android:layout_marginStart="8dp"
+                app:layout_constraintStart_toEndOf="@id/status_dot_2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Lihat Detail -->
+            <TextView
+                android:id="@+id/tv_detail_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lihat Detail"
+                android:textSize="12sp"
+                android:textColor="#F8C300"
+                android:fontFamily="sans-serif-medium"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <!-- Plate Number -->
+            <TextView
+                android:id="@+id/tv_nopol_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="BE 1234 AB"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_status_2" />
+
+            <!-- Tax Type -->
+            <TextView
+                android:id="@+id/tv_tax_type_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pajak Kendaraan Bermotor (Tahunan)"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-medium"
+                android:textStyle="italic"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_nopol_2" />
+
+            <!-- Total Label -->
+            <TextView
+                android:id="@+id/tv_total_label_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Pembayaran:"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_tax_type_2"
+                android:layout_marginTop="16dp"/>
+
+            <!-- Total Value -->
+            <TextView
+                android:id="@+id/tv_total_value_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rp 535.500"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_marginTop="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_total_label_2" />
+
+            <!-- Date (Aligned with Total Value) -->
+            <TextView
+                android:id="@+id/tv_date_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 September 2026"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_total_value_2"
+                app:layout_constraintBottom_toBottomOf="@id/tv_total_value_2"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
