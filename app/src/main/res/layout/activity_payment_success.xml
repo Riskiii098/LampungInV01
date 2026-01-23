@@ -4,60 +4,87 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    android:background="@drawable/bg_yellow_gradient"
     tools:context=".PaymentSuccessActivity">
+
+    <!-- Decorative Dots (Background Layer) -->
+    <!-- Yellow 1 - Top Left Corner -->
+    <View
+        android:id="@+id/dot_yellow_1"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/bg_circle_indicator"
+        android:backgroundTint="#FFD600"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Green 1 - Top Right Corner -->
+    <View
+        android:id="@+id/dot_green_1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="70dp"
+        android:background="@drawable/bg_circle_indicator"
+        android:backgroundTint="#4CAF50"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Yellow 2 - Bottom Left Corner -->
+    <View
+        android:id="@+id/dot_yellow_2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="70dp"
+        android:layout_marginBottom="200dp"
+        android:background="@drawable/bg_circle_indicator"
+        android:backgroundTint="#FFD600"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Green 2 - Bottom Right Corner -->
+    <View
+        android:id="@+id/dot_green_2"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="220dp"
+        android:background="@drawable/bg_circle_indicator"
+        android:backgroundTint="#4CAF50"
+        android:elevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Yellow 3 - Top Center -->
+    <View
+        android:id="@+id/dot_yellow_3"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/bg_circle_indicator"
+        android:backgroundTint="#FFD600"
+        android:elevation="1dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Container for the animation elements to center them -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/animation_container"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.4">
-
-        <!-- Decorative Dots (Background) -->
-        <View
-            android:layout_width="12dp"
-            android:layout_height="12dp"
-            android:background="@drawable/bg_circle_indicator"
-            android:backgroundTint="#F8C300"
-            android:translationX="-60dp"
-            android:translationY="-40dp"
-            app:layout_constraintStart_toStartOf="@id/img_center"
-            app:layout_constraintTop_toTopOf="@id/img_center" />
-
-        <View
-            android:layout_width="8dp"
-            android:layout_height="8dp"
-            android:background="@drawable/bg_circle_indicator"
-            android:backgroundTint="#4CAF50"
-            android:translationX="50dp"
-            android:translationY="-30dp"
-            app:layout_constraintEnd_toEndOf="@id/img_center"
-            app:layout_constraintTop_toTopOf="@id/img_center" />
-
-        <View
-            android:layout_width="10dp"
-            android:layout_height="10dp"
-            android:background="@drawable/bg_circle_indicator"
-            android:backgroundTint="#F8C300"
-            android:translationX="-80dp"
-            android:translationY="20dp"
-            app:layout_constraintStart_toStartOf="@id/img_left"
-            app:layout_constraintTop_toTopOf="@id/img_left" />
-
-        <View
-            android:layout_width="14dp"
-            android:layout_height="14dp"
-            android:background="@drawable/bg_circle_indicator"
-            android:backgroundTint="#4CAF50"
-            android:translationX="70dp"
-            android:translationY="10dp"
-            app:layout_constraintEnd_toEndOf="@id/img_right"
-            app:layout_constraintTop_toTopOf="@id/img_right" />
 
         <!-- 
            Reordered for Z-Index:
@@ -124,7 +151,7 @@
         android:layout_marginHorizontal="24dp"
         android:layout_marginBottom="32dp"
         android:fontFamily="sans-serif-medium"
-        android:text="Selesai"
+        android:text="Cek Bukti Pembayaran"
         android:textColor="@color/white"
         android:textSize="14sp"
         app:backgroundTint="#F8C300"

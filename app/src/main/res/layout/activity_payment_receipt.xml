@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".PaymentReceiptActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Header Image -->
+        <ImageView
+            android:id="@+id/iv_header"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/gradientatasbuktipajak"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Close Button (X) -->
+        <ImageView
+            android:id="@+id/btn_close"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="24dp"
+            android:src="@drawable/ic_close"
+            app:tint="@color/black"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Title: Bukti Pembayaran -->
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bukti Pembayaran"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-bold"
+            android:layout_marginBottom="4dp"
+            app:layout_constraintBottom_toTopOf="@id/tv_subtitle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Subtitle: Pajak Kendaraan Bermotor (PKB) -->
+        <TextView
+            android:id="@+id/tv_subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pajak Kendaraan Bermotor (PKB)"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@id/card_container"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Content Card -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="24dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/iv_header"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="-480dp"
+            android:layout_marginBottom="32dp"
+            app:layout_constraintBottom_toBottomOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp">
+
+                <!-- No. Referensi Label -->
+                <TextView
+                    android:id="@+id/tv_ref_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="No. Referensi"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Transaction Date (Right aligned) -->
+                <TextView
+                    android:id="@+id/tv_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="10 September 2026"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_ref_label" />
+
+                <!-- Transaction Time (Right aligned, below date) -->
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="14:32 WIB"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_date" />
+
+                <!-- Transaction ID Value -->
+                <TextView
+                    android:id="@+id/tv_ref_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="TXN-092826-00123"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ref_label" />
+
+                <!-- Instansi Label -->
+                <TextView
+                    android:id="@+id/tv_instansi_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Instansi"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ref_value" />
+
+                <!-- Instansi Value -->
+                <TextView
+                    android:id="@+id/tv_instansi_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Samsat Provinsi Lampung"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_instansi_label" />
+
+                <!-- Status Label -->
+                <TextView
+                    android:id="@+id/tv_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Status Pembayaran"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_instansi_value" />
+
+                <!-- Status Value -->
+                <TextView
+                    android:id="@+id/tv_status_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Menunggu Validasi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status_label" />
+
+                <!-- Data Kendaraan Header -->
+                <TextView
+                    android:id="@+id/tv_data_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Data Kendaraan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status_value" />
+
+                <!-- Row 1: Nopol & Owner -->
+                <!-- Nopol Label -->
+                <TextView
+                    android:id="@+id/tv_nopol_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Nomor Polisi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_data_header" />
+
+                <!-- Nopol Value -->
+                <TextView
+                    android:id="@+id/tv_nopol_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="BE 234 AB"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nopol_label" />
+
+                <!-- Owner Label -->
+                <TextView
+                    android:id="@+id/tv_owner_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Nama Pemilik"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_mid"
+                    app:layout_constraintTop_toTopOf="@id/tv_nopol_label" />
+
+                <!-- Owner Value -->
+                <TextView
+                    android:id="@+id/tv_owner_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Ratu Berliana"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_mid"
+                    app:layout_constraintTop_toBottomOf="@id/tv_owner_label" />
+
+                <!-- Row 2: Brand & Year -->
+                <!-- Brand Label -->
+                <TextView
+                    android:id="@+id/tv_brand_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Merk/Tipe:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_nopol_value" />
+
+                <!-- Brand Value -->
+                <TextView
+                    android:id="@+id/tv_brand_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Honda Vario 160"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_brand_label" />
+
+                <!-- Year Label -->
+                <TextView
+                    android:id="@+id/tv_year_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Tahun Kendaraan"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_mid"
+                    app:layout_constraintTop_toTopOf="@id/tv_brand_label" />
+
+                <!-- Year Value -->
+                <TextView
+                    android:id="@+id/tv_year_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="2021"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@+id/guideline_mid"
+                    app:layout_constraintTop_toBottomOf="@id/tv_year_label" />
+
+                <!-- Informasi Pajak Header -->
+                <TextView
+                    android:id="@+id/tv_tax_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Informasi Pajak"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_brand_value" />
+
+                <!-- Jenis Pajak Label -->
+                <TextView
+                    android:id="@+id/tv_tax_type_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Jenis Pajak:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax_header" />
+
+                <!-- Jenis Pajak Value -->
+                <TextView
+                    android:id="@+id/tv_tax_type_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Pajak Kendaraan Bermotor"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax_type_label" />
+
+                <!-- Periode Pajak Label -->
+                <TextView
+                    android:id="@+id/tv_tax_period_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Periode Pajak"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax_type_value" />
+
+                <!-- Periode Pajak Value -->
+                <TextView
+                    android:id="@+id/tv_tax_period_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="16 September 2025 - 15 September 2026"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax_period_label" />
+
+                <!-- Rincian Pembayaran Header -->
+                <TextView
+                    android:id="@+id/tv_payment_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Rincian Pembayaran"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_tax_period_value" />
+
+                <!-- Row 1: PKB Pokok -->
+                <TextView
+                    android:id="@+id/tv_label_pkb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="PKB Pokok:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_payment_header" />
+
+                <TextView
+                    android:id="@+id/tv_value_pkb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 300.000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_pkb" />
+
+                <!-- Row 2: Opsen PKB -->
+                <TextView
+                    android:id="@+id/tv_label_opsen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Opsen PKB:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_pkb" />
+
+                <TextView
+                    android:id="@+id/tv_value_opsen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 150.000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_opsen" />
+
+                <!-- Row 3: SWDKLLJ -->
+                <TextView
+                    android:id="@+id/tv_label_swdkllj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="SWDKLLJ:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_opsen" />
+
+                <TextView
+                    android:id="@+id/tv_value_swdkllj"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 35.000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_swdkllj" />
+
+                <!-- Row 4: Denda PKB -->
+                <TextView
+                    android:id="@+id/tv_label_denda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Denda PKB:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_swdkllj" />
+
+                <TextView
+                    android:id="@+id/tv_value_denda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 25.000"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_denda" />
+
+                <!-- Row 5: Biaya Administrasi -->
+                <TextView
+                    android:id="@+id/tv_label_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Biaya Administrasi:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_denda" />
+
+                <TextView
+                    android:id="@+id/tv_value_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 2.500"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_admin" />
+
+                <!-- Divider before Total -->
+                <View
+                    android:id="@+id/divider_total"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#E0E0E0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_admin" />
+
+                <!-- Row: Total -->
+                <TextView
+                    android:id="@+id/tv_label_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="Total:"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/divider_total" />
+
+                <TextView
+                    android:id="@+id/tv_value_total"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Rp 512.500"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_total" />
+
+                <!-- Metode Pembayaran Header -->
+                <TextView
+                    android:id="@+id/tv_method_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Metode Pembayaran"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_total" />
+
+                <!-- Row: Metode -->
+                <TextView
+                    android:id="@+id/tv_label_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Metode"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_method_header" />
+
+                <TextView
+                    android:id="@+id/tv_value_method"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="QRIS"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_method" />
+
+                <!-- Row: Status Transaksi -->
+                <TextView
+                    android:id="@+id/tv_label_status_trx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Status Transaksi"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@id/tv_label_pkb"
+                    app:layout_constraintTop_toBottomOf="@id/tv_label_method" />
+
+                <TextView
+                    android:id="@+id/tv_value_status_trx"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Berhasil"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/tv_label_status_trx" />
+                <!-- Vertical Guideline at 50% -->
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideline_mid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <!-- Catatan Section -->
+        <!-- Icon Info -->
+        <ImageView
+            android:id="@+id/iv_info_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:src="@drawable/infokuning"
+            android:layout_marginTop="24dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/card_container" />
+
+        <!-- Label Catatan -->
+        <TextView
+            android:id="@+id/tv_note_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Catatan:"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/iv_info_icon"
+            app:layout_constraintTop_toTopOf="@id/iv_info_icon"
+            app:layout_constraintBottom_toBottomOf="@id/iv_info_icon" />
+
+        <!-- Point 1 Number -->
+        <TextView
+            android:id="@+id/tv_note_num_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@id/iv_info_icon"
+            app:layout_constraintTop_toBottomOf="@id/iv_info_icon" />
+
+        <!-- Point 1 Text -->
+        <TextView
+            android:id="@+id/tv_note_text_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran memerlukan validasi Samsat dalam waktu 1-3 hari kerja."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toEndOf="@id/tv_note_num_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_note_num_1" />
+
+        <!-- Point 2 Number -->
+        <TextView
+            android:id="@+id/tv_note_num_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/iv_info_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_note_text_1" />
+
+        <!-- Point 2 Text -->
+        <TextView
+            android:id="@+id/tv_note_text_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran sebelum pukul 13.00 WIB diproses di hari yang sama."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toEndOf="@id/tv_note_num_2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_note_num_2" />
+
+        <!-- Point 3 Number -->
+        <TextView
+            android:id="@+id/tv_note_num_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"
+            app:layout_constraintStart_toStartOf="@id/iv_info_icon"
+            app:layout_constraintTop_toBottomOf="@id/tv_note_text_2" />
+
+        <!-- Point 3 Text -->
+        <TextView
+            android:id="@+id/tv_note_text_3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Pembayaran di luar jam kerja akan diproses pada hari kerja berikutnya."
+            android:textSize="12sp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="24dp"
+            app:layout_constraintStart_toEndOf="@id/tv_note_num_3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tv_note_num_3" />
+
+        <!-- Button Kembali -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Kembali ke Beranda"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:fontFamily="sans-serif-medium"
+            app:backgroundTint="#F8C300"
+            app:cornerRadius="8dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="32dp"
+            android:paddingVertical="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_note_text_3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

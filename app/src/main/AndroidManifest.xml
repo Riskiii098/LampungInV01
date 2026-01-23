@@ -43,6 +43,7 @@
         <activity android:name=".PaymentMethodActivity" />
         <activity android:name=".KodeQrisActivity" />
         <activity android:name=".PaymentSuccessActivity" />
+        <activity android:name=".PaymentReceiptActivity" />
         <activity android:name=".VehicleInfoActivity" />
         
     </application>
