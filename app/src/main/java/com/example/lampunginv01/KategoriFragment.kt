@@ -62,6 +62,9 @@ class KategoriFragment : Fragment() {
             } else if (item.title.contains("Pendidikan")) {
                 val intent = android.content.Intent(requireContext(), PendidikanActivity::class.java)
                 startActivity(intent)
+            } else if (item.title.contains("Informasi")) {
+                val intent = android.content.Intent(requireContext(), InformasiPublikActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(requireContext(), "Pilih: ${item.title}", Toast.LENGTH_SHORT).show()
             }
