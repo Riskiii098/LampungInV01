@@ -13,7 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LampungInV01">
-        <activity android:name=".MenuSpesialActivity" />
+                <activity
+                    android:name=".AspirasiActivity"
+                    android:exported="false"
+                    android:screenOrientation="portrait" />
+                        <activity
+                            android:name=".DaruratActivity"
+                            android:exported="false"
+                            android:screenOrientation="portrait" />
+                                <activity
+                                    android:name=".KesehatanActivity"
+                                    android:exported="false"
+                                    android:screenOrientation="portrait" />
+                                        <activity
+                                            android:name=".KependudukanActivity"
+                                            android:exported="false"
+                                            android:screenOrientation="portrait" />
+                                                <activity
+                                                    android:name=".InfoLokasiActivity"
+                                                    android:exported="false"
+                                                    android:screenOrientation="portrait" />
+                                                        <activity
+                                                            android:name=".PendidikanActivity"
+                                                            android:exported="false"
+                                                            android:screenOrientation="portrait" />
+                                                        <activity
+                                                            android:name=".MenuSpesialActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
