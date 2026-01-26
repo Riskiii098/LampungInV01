@@ -65,6 +65,18 @@ class KategoriFragment : Fragment() {
             } else if (item.title.contains("Informasi")) {
                 val intent = android.content.Intent(requireContext(), InformasiPublikActivity::class.java)
                 startActivity(intent)
+            } else if (item.title.contains("Layanan Sosial")) {
+                val intent = android.content.Intent(requireContext(), SosialKeagamaanActivity::class.java)
+                startActivity(intent)
+            } else if (item.title.contains("Karir")) {
+                val intent = android.content.Intent(requireContext(), KarirUsahaActivity::class.java)
+                startActivity(intent)
+            } else if (item.title == "Lingkungan") {
+                val intent = android.content.Intent(requireContext(), LingkunganActivity::class.java)
+                startActivity(intent)
+            } else if (item.title.contains("Perekonomian")) {
+                val intent = android.content.Intent(requireContext(), PerekonomianActivity::class.java)
+                startActivity(intent)
             } else {
                 Toast.makeText(requireContext(), "Pilih: ${item.title}", Toast.LENGTH_SHORT).show()
             }

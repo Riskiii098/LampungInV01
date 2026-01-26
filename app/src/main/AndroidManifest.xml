@@ -41,8 +41,24 @@
                                                                     android:name=".InformasiPublikActivity"
                                                                     android:exported="false"
                                                                     android:screenOrientation="portrait" />
-                                                                <activity
-                                                                    android:name=".MenuSpesialActivity" />
+                                                                        <activity
+                                                                            android:name=".SosialKeagamaanActivity"
+                                                                            android:exported="false"
+                                                                            android:screenOrientation="portrait" />
+                                                                                <activity
+                                                                                    android:name=".KarirUsahaActivity"
+                                                                                    android:exported="false"
+                                                                                    android:screenOrientation="portrait" />
+                                                                                        <activity
+                                                                                            android:name=".LingkunganActivity"
+                                                                                            android:exported="false"
+                                                                                            android:screenOrientation="portrait" />
+                                                                                                <activity
+                                                                                                    android:name=".PerekonomianActivity"
+                                                                                                    android:exported="false"
+                                                                                                    android:screenOrientation="portrait" />
+                                                                                                <activity
+                                                                                                    android:name=".MenuSpesialActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
