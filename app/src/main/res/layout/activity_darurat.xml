@@ -113,7 +113,7 @@
                     android:text="List kontak yang dapat kamu hubungi saat situasi darurat"
                     android:textSize="12sp"
                     android:fontFamily="sans-serif-light"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@color/black"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
         </LinearLayout>
@@ -167,7 +167,7 @@
                     android:text="Cari ambulans gratis terdekat di sekitar kamu"
                     android:textSize="12sp"
                     android:fontFamily="sans-serif-light"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@color/black"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
         </LinearLayout>
@@ -221,7 +221,7 @@
                     android:text="Cari bank darah yang tersedia di sekitar kamu"
                     android:textSize="12sp"
                     android:fontFamily="sans-serif-light"
-                    android:textColor="@android:color/darker_gray"
+                    android:textColor="@color/black"
                     android:layout_marginTop="2dp" />
             </LinearLayout>
         </LinearLayout>

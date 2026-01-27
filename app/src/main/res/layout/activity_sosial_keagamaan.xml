@@ -96,7 +96,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/darurat1"
+                        android:src="@drawable/sosial1"
                         android:contentDescription="Icon Sosial" />
 
                     <LinearLayout
@@ -113,6 +113,14 @@
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dapatkan informasi seputar bantuan sosial"
+                            android:textSize="12sp"
+                            android:fontFamily="sans-serif-light"
+                            android:textColor="@color/black" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -138,11 +146,12 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/darurat1"
+                        android:src="@drawable/sosial2"
                         android:contentDescription="Icon Keagamaan" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp"
@@ -156,6 +165,12 @@
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

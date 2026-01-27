@@ -158,7 +158,7 @@
                     <View
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
+                        android:background="@drawable/beasiswa1" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -180,7 +180,7 @@
                             android:text="Beasiswa S1"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="2dp" />
 
                         <LinearLayout
@@ -229,7 +229,7 @@
                     <View
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
+                        android:background="@drawable/beasiswa2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -251,7 +251,7 @@
                             android:text="Beasiswa S2/S3"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="2dp" />
 
                         <LinearLayout
@@ -280,6 +280,124 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
+
+            <!-- Section: Layanan Pendidikan -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Layanan Pendidikan"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif-medium"
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <!-- Card Layanan 1 -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayanan1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/layanan1"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Sistem Penerimaan Murid Baru (Disdikbud Provinsi Lampung)"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Card Layanan 2 -->
+             <androidx.cardview.widget.CardView
+                android:id="@+id/cardLayanan2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="12dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="@android:color/white">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/layanan2"/>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginHorizontal="16dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Pelayanan Penerbitan Surat Keterangan Penelitian (Kesbangpol/Balitbangda)"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
 
             <!-- Section: Pelatihan -->
             <LinearLayout
@@ -329,7 +447,7 @@
                     <View
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
+                        android:background="@drawable/pelatihan1" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -387,7 +505,7 @@
                             android:text="Pelatihan Excel untuk pemula membantu peserta memahami dasar penggunaan Excel untuk mengolah data sederhana secara rapi, cepat, dan efisien."
                             android:textSize="11sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="4dp" 
                             android:maxLines="3"
                             android:ellipsize="end"/>
@@ -438,7 +556,7 @@
                     <View
                         android:layout_width="80dp"
                         android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
+                        android:background="@drawable/pelatihan2" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
@@ -493,10 +611,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pelatihan Excel untuk pemula membantu peserta memahami dasar penggunaan Excel untuk mengolah data sederhana secara rapi, cepat, dan efisien."
+                            android:text="Untuk kamu yang tertarik di bidang IT, belajar fondasi awal pemrograman. Di sini kita akan belajar, konsep awal pemrograman, dan perbedaan tiap bahasa pemrograman."
                             android:textSize="11sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="4dp" 
                             android:maxLines="3"
                             android:ellipsize="end"/>
@@ -527,251 +645,7 @@
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Section: Pengembangan Skills -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
-                android:paddingHorizontal="20dp"
-                android:layout_marginTop="24dp"
-                android:layout_marginBottom="16dp">
 
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Pengembangan Skills"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Lihat Detail"
-                    android:textSize="14sp"
-                    android:fontFamily="sans-serif-medium"
-                    android:textColor="#FDD835" />
-            </LinearLayout>
-
-            <!-- Card Skills 1 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSkills1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="@android:color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Belajar Dasar Manajamen Projek"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black" />
-
-                        <!-- Online & Gratis -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="4dp">
-                            
-                            <ImageView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:src="@drawable/online"
-                                app:tint="#FDD835" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Online"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="4dp"
-                                android:layout_marginEnd="12dp"/>
-
-                            <ImageView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:src="@drawable/gratis"
-                                app:tint="#FDD835" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Gratis"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="4dp"/>
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pelatihan manajemen proyek dasar untuk pemula."
-                            android:textSize="11sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="4dp" 
-                            android:maxLines="3"
-                            android:ellipsize="end"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="8dp">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:src="@drawable/daftar"
-                                app:tint="@android:color/darker_gray" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Pendaftaran: 24 Januari - 30 Maret"
-                                android:textSize="11sp"
-                                android:fontFamily="sans-serif-light"
-                                android:textColor="@android:color/darker_gray"
-                                android:layout_marginStart="4dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-
-            <!-- Card Skills 2 -->
-            <androidx.cardview.widget.CardView
-                android:id="@+id/cardSkills2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="20dp"
-                android:layout_marginBottom="12dp"
-                app:cardCornerRadius="8dp"
-                app:cardElevation="2dp"
-                app:cardBackgroundColor="@android:color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:padding="12dp">
-
-                    <View
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
-                        android:background="@drawable/bg_gray_rounded" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="12dp">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Pelatihan Kepemimpinan"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:textColor="@color/black" />
-
-                        <!-- Online & Gratis -->
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="4dp">
-                            
-                            <ImageView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:src="@drawable/online"
-                                app:tint="#FDD835" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Online"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="4dp"
-                                android:layout_marginEnd="12dp"/>
-
-                            <ImageView
-                                android:layout_width="12dp"
-                                android:layout_height="12dp"
-                                android:src="@drawable/gratis"
-                                app:tint="#FDD835" />
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Gratis"
-                                android:textSize="11sp"
-                                android:textColor="@color/black"
-                                android:layout_marginStart="4dp"/>
-                        </LinearLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Mengembangkan jiwa kepemimpinan yang efektif."
-                            android:textSize="11sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="4dp" 
-                            android:maxLines="3"
-                            android:ellipsize="end"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:orientation="horizontal"
-                            android:gravity="center_vertical"
-                            android:layout_marginTop="8dp">
-
-                            <ImageView
-                                android:layout_width="16dp"
-                                android:layout_height="16dp"
-                                android:src="@drawable/daftar"
-                                app:tint="@android:color/darker_gray" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="Pendaftaran: 24 Januari - 30 Maret"
-                                android:textSize="11sp"
-                                android:fontFamily="sans-serif-light"
-                                android:textColor="@android:color/darker_gray"
-                                android:layout_marginStart="4dp" />
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
 
             <!-- Section: Mungkin kamu suka -->
             <TextView
@@ -785,17 +659,140 @@
                 android:layout_marginTop="24dp"
                 android:layout_marginBottom="12dp" />
 
-            <!-- RecyclerView Videos -->
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rvVideos"
+            <!-- HorizontalScrollView for Videos -->
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingStart="20dp"
                 android:paddingEnd="4dp"
                 android:clipToPadding="false"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                tools:listitem="@layout/item_video" xmlns:tools="http://schemas.android.com/tools" />
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <!-- Video 1 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardVideo1"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="136dp"
+                                    android:src="@drawable/tonton1"
+                                    android:scaleType="centerCrop"
+                                    android:contentDescription="Thumbnail Video" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Pahami serangan cyber, dampak, dan cara menghindarinya"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="8dp"
+                                android:maxLines="2"
+                                android:ellipsize="end" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tonton"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:backgroundTint="#FDD835"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="8dp"
+                                android:minHeight="0dp"
+                                app:cornerRadius="8dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <!-- Video 2 -->
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cardVideo2"
+                        android:layout_width="300dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:layout_marginBottom="8dp"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="2dp"
+                        app:cardBackgroundColor="@android:color/white">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="12dp">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp">
+                                <ImageView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="136dp"
+                                    android:src="@drawable/tonton2"
+                                    android:scaleType="centerCrop"
+                                    android:contentDescription="Thumbnail Video" />
+                            </androidx.cardview.widget.CardView>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Ini dia 5 skills yang dibutuhkan di tahun 2026"
+                                android:textSize="14sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:textColor="@color/black"
+                                android:layout_marginTop="8dp"
+                                android:maxLines="2"
+                                android:ellipsize="end" />
+
+                            <com.google.android.material.button.MaterialButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Tonton"
+                                android:textColor="@android:color/white"
+                                android:textSize="12sp"
+                                android:fontFamily="sans-serif-medium"
+                                android:backgroundTint="#FDD835"
+                                android:paddingVertical="4dp"
+                                android:layout_marginTop="8dp"
+                                android:minHeight="0dp"
+                                app:cornerRadius="8dp"
+                                android:insetTop="0dp"
+                                android:insetBottom="0dp"/>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+            </HorizontalScrollView>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

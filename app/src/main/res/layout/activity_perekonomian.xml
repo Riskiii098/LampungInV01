@@ -96,7 +96,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_pajak"
+                        android:src="@drawable/ekonomi1"
                         android:contentDescription="Icon Pajak" />
 
                     <LinearLayout
@@ -117,10 +117,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Informasi dan pembayaran pajak"
+                            android:text="List kontak yang dapat kamu hubungi saat situasi darurat"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="2dp" />
                     </LinearLayout>
                 </LinearLayout>
@@ -147,11 +147,12 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/shop"
+                        android:src="@drawable/ekonomi2"
                         android:contentDescription="Icon Pangan" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp"
@@ -160,20 +161,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Harga Pangan"
+                            android:text="Cek Harga Pangan"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Informasi harga pangan terkini"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="2dp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 

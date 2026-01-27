@@ -42,7 +42,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         setupMenuGrid()
         setupBannerSlider()
         setupTestimonials()
-        setupRecommendations()
+        // setupRecommendations() - Removed as we now use static layout
     }
 
     private fun setupMenuGrid() {
@@ -228,6 +228,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         }
     }
 
+    /*
     private fun setupRecommendations() {
         val recommendationList = listOf(
             RecommendationModel(
@@ -260,6 +261,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             isNestedScrollingEnabled = false
         }
     }
+    */
 
     private fun updateIndicatorText(position: Int, total: Int) {
         val current = position + 1

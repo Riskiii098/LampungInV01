@@ -96,11 +96,12 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/banjir5"
+                        android:src="@drawable/lingkungan1"
                         android:contentDescription="Icon Banjir" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp"
@@ -117,12 +118,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Informasi daerah rawan banjir"
+                            android:text="Pantau lokasi di Lampung yang terdampak banjir"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="2dp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -147,11 +154,12 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_kt12"
+                        android:src="@drawable/lingkungan2"
                         android:contentDescription="Icon Cuaca" />
 
                     <LinearLayout
-                        android:layout_width="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
                         android:layout_marginStart="16dp"
@@ -168,12 +176,18 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Update cuaca terkini"
+                            android:text="Cari ambulans gratis terdekat di sekitar kamu"
                             android:textSize="12sp"
                             android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
+                            android:textColor="@color/black"
                             android:layout_marginTop="2dp" />
                     </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_arrow_right"
+                        app:tint="#FDD835" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
@@ -210,7 +224,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_kt12"
+                        android:src="@drawable/lingkungan3"
                         android:contentDescription="Icon TPS" />
 
                     <LinearLayout
@@ -223,19 +237,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Informasi TPS/TPA"
+                            android:text="Perizinan Tata Ruang (Simtaru)"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Lokasi tempat pembuangan sampah"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -261,7 +267,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_kt12"
+                        android:src="@drawable/lingkungan4"
                         android:contentDescription="Icon Air" />
 
                     <LinearLayout
@@ -274,19 +280,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Pengujian Kualitas Air (ESDM)"
+                            android:text="Dinas Energi dan Sumber Daya (ESDM)"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Layanan pengujian air"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -312,7 +310,7 @@
                     <ImageView
                         android:layout_width="48dp"
                         android:layout_height="48dp"
-                        android:src="@drawable/ic_kt12"
+                        android:src="@drawable/lingkungan5"
                         android:contentDescription="Icon AMDAL" />
 
                     <LinearLayout
@@ -325,19 +323,11 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="AMDAL"
+                            android:text="Dinas Lingkungan Hidup (DLH)"
                             android:textSize="14sp"
                             android:textStyle="bold"
                             android:textColor="@android:color/black" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Analisis Mengenai Dampak Lingkungan"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="2dp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -351,47 +341,7 @@
                 android:layout_marginBottom="8dp"
                 app:cardCornerRadius="8dp"
                 app:cardElevation="2dp"
-                app:cardBackgroundColor="@android:color/white">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
-                    android:padding="16dp">
-
-                    <ImageView
-                        android:layout_width="48dp"
-                        android:layout_height="48dp"
-                        android:src="@drawable/ic_kt12"
-                        android:contentDescription="Icon SIH3" />
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_marginStart="16dp"
-                        android:gravity="center_vertical">
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="SIH3 (Hidrologi, Hidrometerologi, Hidrogeologi)"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:textColor="@android:color/black" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Sistem Informasi Hidrologi"
-                            android:textSize="12sp"
-                            android:fontFamily="sans-serif-light"
-                            android:textColor="@android:color/darker_gray"
-                            android:layout_marginTop="2dp" />
-                    </LinearLayout>
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
+                app:cardBackgroundColor="@android:color/white"/>
 
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

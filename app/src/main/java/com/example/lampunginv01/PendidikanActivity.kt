@@ -42,9 +42,10 @@ class PendidikanActivity : AppCompatActivity() {
             Toast.makeText(this, "Pelatihan Excel Dipilih", Toast.LENGTH_SHORT).show()
         }
 
-        setupVideoList()
+        // setupVideoList() - Removed as we now use static layout
     }
 
+    /*
     private fun setupVideoList() {
         val videoList = listOf(
             VideoModel("Judul Video 1"),
@@ -58,4 +59,5 @@ class PendidikanActivity : AppCompatActivity() {
 
         binding.rvVideos.adapter = adapter
     }
+    */
 }
