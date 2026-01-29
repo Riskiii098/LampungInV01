@@ -94,9 +94,9 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         // Dummy Data Banner (4 item)
         val bannerList = listOf(
             BannerModel(R.drawable.banner1), // Ganti dengan gambar banner asli nanti
-            BannerModel(R.drawable.banner1),
-            BannerModel(R.drawable.banner1),
-            BannerModel(R.drawable.banner1)
+            BannerModel(R.drawable.banner2),
+            BannerModel(R.drawable.banner3),
+            BannerModel(R.drawable.banner4)
         )
 
         val bannerAdapter = BannerAdapter(bannerList)
