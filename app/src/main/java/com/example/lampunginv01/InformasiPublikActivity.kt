@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,7 +31,7 @@ class InformasiPublikActivity : AppCompatActivity() {
         }
 
         binding.cardInfo1.setOnClickListener {
-            Toast.makeText(this, "Menu Berita Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, BeritaActivity::class.java))
         }
 
         binding.cardInfo2.setOnClickListener {

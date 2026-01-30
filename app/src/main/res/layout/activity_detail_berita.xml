@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/soft_yellow_white"
+    tools:context=".DetailBeritaActivity">
+
+    <ImageView
+        android:id="@+id/btnBack"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_back_arrow"
+        android:contentDescription="Kembali"
+        app:tint="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/btnBack"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="40dp">
+
+            <!-- Date -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13 Januari 2026"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="20dp" />
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Resmikan Gudang Ayu Cosmetics, Ketua TP. PKK Provinsi Lampung Dorong Wirausaha dan Penyerapan Tenaga Kerja"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="@color/black"
+                android:layout_marginTop="8dp"
+                android:layout_marginHorizontal="20dp" />
+
+            <!-- Source -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="lampungprov.go.id"
+                android:textSize="12sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:layout_marginTop="4dp"
+                android:layout_marginHorizontal="20dp" />
+
+            <!-- 4 Social Icons Placeholders -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="20dp">
+
+                <!-- Facebook -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/facebook"
+                    android:layout_marginEnd="12dp" />
+                
+                 <!-- Email -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/email"
+                    android:layout_marginEnd="12dp" />
+
+                 <!-- Twitter -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/twitter"
+                    android:layout_marginEnd="12dp" />
+
+                 <!-- Link -->
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/link" />
+            </LinearLayout>
+
+            <!-- Full Width Image - Same style as Notification Detail -->
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:src="@drawable/beritabesar"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop" />
+
+            <!-- Paragraph 1 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bandar Lampung-Ketua Tim Penggerak PKK Provinsi Lampung, Purnama Wulan Sari Mirza, meresmikan Gudang Ayu Cosmetics di Jl. P. Tirtayasa No. 1C, Sukabumi Indah, Kecamatan Sukabumi, Kota Bandar Lampung, yang ditandai dengan pemotongan pita, Sabtu (24/01/2026)."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="16dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 2 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dalam kesempatan tersebut, Purnama Wulan Sari Mirza menyampaikan apresiasi atas hadirnya Gudang Ayu Cosmetics sebagai bentuk nyata semangat kewirausahaan di Provinsi Lampung. Menurutnya, kehadiran Gudang Ayu Cosmetics tidak hanya berorientasi pada pengembangan bisnis, tetapi juga memberikan kontribusi nyata terhadap penciptaan lapangan kerja."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 3 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“Peresmian Gudang Ayu Cosmetics pagi ini merupakan langkah yang patut kita apresiasi. Kehadirannya menunjukkan semangat kewirausahaan sekaligus membuka peluang kerja bagi masyarakat Lampung,” ujar Purnama Wulan Sari Mirza."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 4 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gudang Ayu Cosmetics diharapkan menjadi destinasi bagi masyarakat, khususnya perempuan dan generasi muda, untuk mendapatkan produk kecantikan berkualitas. Produk-produk yang ditawarkan merupakan produk kebanggaan Indonesia, termasuk merek legendaris yang tidak hanya berfungsi untuk kecantikan, tetapi juga kesehatan."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 5 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Lebih lanjut, Purnama Wulan Sari Mirza berharap Gudang Ayu Cosmetics dapat terus berkembang dan membuka cabang di kabupaten maupun kota lain di Provinsi Lampung, sehingga memberikan dampak positif terhadap pertumbuhan ekonomi daerah."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 6 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“Saya berharap Gudang Ayu Cosmetics dapat tumbuh dan memberikan kontribusi positif bagi perekonomian daerah, khususnya bagi perempuan Lampung,” tuturnya."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 7 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sementara itu, Muhammad Ibnu Rusydi, selaku Manajemen Gudang Ayu Cosmetics, menyampaikan bahwa kehadiran Gudang Ayu Cosmetics di Lampung merupakan wujud kepedulian putra daerah untuk berkontribusi bagi tanah kelahiran."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 8 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="“Gudang Ayu lahir dari keinginan kami sebagai putra Lampung untuk menghadirkan lapangan kerja serta toko kosmetik yang nyaman, inklusif, dan bisa diakses oleh semua kalangan,” ujarnya."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 9 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Gudang Ayu Cosmetics memiliki visi menjadi toko kosmetik terlengkap dengan jaringan terluas di Indonesia."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 10 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Dalam rangka memperkuat komitmen tersebut, Gudang Ayu Cosmetics juga melakukan penandatanganan Nota Kesepahaman (MoU) dengan Pemerintah Provinsi Lampung melalui Dinas Tenaga Kerja Provinsi Lampung, yang dilakukan oleh Kepala Dinas Tenaga Kerja Provinsi Lampung, Agus Nompitu bersama Muhammad Ibnu Rusydi, selaku Manajemen Gudang Ayu Cosmetics."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Paragraph 11 -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penandatanganan MoU ini diharapkan menjadi motor penggerak peningkatan kesempatan kerja sekaligus mendorong pertumbuhan ekonomi daerah secara berkelanjutan di Provinsi Lampung. (Dinas Kominfotik Provinsi Lampung)."
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginTop="12dp"
+                android:layout_marginHorizontal="20dp"
+                android:lineSpacingExtra="4dp"/>
+
+            <!-- Action Bar -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="20dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/love_ic"
+                    app:tint="#FDD835" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6 suka"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif-light"
+                    android:textColor="@color/black"
+                    android:layout_marginStart="8dp"
+                    android:layout_weight="1"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/download_ic"
+                    android:layout_marginEnd="16dp"/>
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/simpan_ic" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0"
+                android:layout_marginBottom="12dp"
+                android:layout_marginHorizontal="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10 Komentar"
+                android:textSize="13sp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="20dp"/>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

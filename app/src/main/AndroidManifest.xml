@@ -91,6 +91,13 @@
         <activity android:name=".PaymentReceiptActivity" />
         <activity android:name=".PaymentHistoryActivity" />
         <activity android:name=".VehicleInfoActivity" />
+        <activity android:name=".DetailBeritaActivity" />
+        <activity android:name=".RsjActivity" />
+        <activity android:name=".PendaftaranRsjActivity" />
+        <activity android:name=".BiodataDiriActivity" />
+        <activity android:name=".AlamatActivity" />
+        <activity android:name=".InformasiLainnyaActivity" />
+        <activity android:name=".PilihLayananActivity" />
         
     </application>
 

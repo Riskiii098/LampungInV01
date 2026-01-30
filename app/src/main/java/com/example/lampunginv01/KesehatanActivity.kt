@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -46,7 +47,7 @@ class KesehatanActivity : AppCompatActivity() {
         }
 
         binding.cardKesehatan4.setOnClickListener {
-            Toast.makeText(this, "Menu Apotek Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, RsjActivity::class.java))
         }
 
         binding.cardKesehatan5.setOnClickListener {

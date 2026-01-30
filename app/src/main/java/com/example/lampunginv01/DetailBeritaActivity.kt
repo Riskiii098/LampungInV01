@@ -1,16 +1,15 @@
 package com.example.lampunginv01
 
-import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lampunginv01.databinding.ActivityBeritaBinding
+import com.example.lampunginv01.databinding.ActivityDetailBeritaBinding
 
-class BeritaActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityBeritaBinding
+class DetailBeritaActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityDetailBeritaBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityBeritaBinding.inflate(layoutInflater)
+        binding = ActivityDetailBeritaBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Handle System Bar Insets
@@ -22,10 +21,6 @@ class BeritaActivity : AppCompatActivity() {
 
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
-        }
-
-        binding.cardBerita1.setOnClickListener {
-            startActivity(Intent(this, DetailBeritaActivity::class.java))
         }
     }
 }

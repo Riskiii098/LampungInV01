@@ -2,15 +2,17 @@ package com.example.lampunginv01
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lampunginv01.databinding.ActivityBeritaBinding
+import com.example.lampunginv01.databinding.ActivityRsjBinding
 
-class BeritaActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityBeritaBinding
+class RsjActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityRsjBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityBeritaBinding.inflate(layoutInflater)
+        binding = ActivityRsjBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Handle System Bar Insets
@@ -20,12 +22,20 @@ class BeritaActivity : AppCompatActivity() {
             insets
         }
 
+        setupActions()
+    }
+
+    private fun setupActions() {
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        binding.cardBerita1.setOnClickListener {
-            startActivity(Intent(this, DetailBeritaActivity::class.java))
+        binding.cardRsj1.setOnClickListener {
+             startActivity(Intent(this, PendaftaranRsjActivity::class.java))
+        }
+
+        binding.cardRsj2.setOnClickListener {
+             Toast.makeText(this, "Menu Jadwal Dokter Dipilih", Toast.LENGTH_SHORT).show()
         }
     }
 }
