@@ -34,7 +34,13 @@ class PaymentSuccessActivity : AppCompatActivity() {
         }
 
         binding.btnFinish.setOnClickListener {
-            val intent = Intent(this, PaymentReceiptActivity::class.java)
+            val receiptType = intent.getStringExtra("RECEIPT_TYPE")
+            val targetActivity = if (receiptType == "RSJ") {
+                PaymentReceiptRsjActivity::class.java
+            } else {
+                PaymentReceiptActivity::class.java
+            }
+            val intent = Intent(this, targetActivity)
             if (getIntent().hasExtra("TOTAL_PRICE")) {
                 intent.putExtra("TOTAL_PRICE", getIntent().getStringExtra("TOTAL_PRICE"))
             }

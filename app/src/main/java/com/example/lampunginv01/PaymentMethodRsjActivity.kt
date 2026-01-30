@@ -53,7 +53,8 @@ class PaymentMethodRsjActivity : AppCompatActivity() {
             if (binding.radioInnerQris.visibility == View.VISIBLE) {
                  // Navigate to QRIS code with specific price
                  val intent = Intent(this, KodeQrisActivity::class.java)
-                 intent.putExtra("TOTAL_PRICE", "Rp 20.000")
+                 intent.putExtra("TOTAL_PRICE", "Rp 260.000")
+                 intent.putExtra("RECEIPT_TYPE", "RSJ")
                  startActivity(intent)
             } else if (binding.radioInnerTellerBankLampung.visibility == View.VISIBLE) {
                  // Navigate to instruction for Teller or Success

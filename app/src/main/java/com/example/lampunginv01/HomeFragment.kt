@@ -49,35 +49,58 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
         // Data Dummy (5 Item agar pas 1 baris)
         val menuList = listOf(
             MenuModel(1, "Laporan", R.drawable.ic_lapor),
-            MenuModel(2, "Berita", R.drawable.ic_berita),
-            MenuModel(3, "Kontak Darurat", R.drawable.ic_kontakdarurat),
-            MenuModel(4, "Pajak", R.drawable.ic_pajak),
+            MenuModel(2, "Pajak", R.drawable.ic_pajak),
+            MenuModel(3, "Layanan Kesehatan", R.drawable.lakesv2),
+            MenuModel(4, "Kontak Darurat", R.drawable.kontakdaruratv2),
             MenuModel(5, "Lainnya", R.drawable.ic_lainnya) // Gunakan ikon titik-titik (ic_lainnya)
         )
 
         val menuAdapter = MenuAdapter(menuList) { selectedMenu ->
-            if (selectedMenu.title == "Lainnya") {
-                if (activity is MainActivity) {
-                    (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
+            when (selectedMenu.title) {
+                "Lainnya" -> {
+                    if (activity is MainActivity) {
+                        (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
+                    }
                 }
-            } else if (selectedMenu.title == "Laporan") {
-                try {
-                    val intent = Intent(requireContext(), FeaturedActivity::class.java)
-                    startActivity(intent)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                "Laporan" -> {
+                    try {
+                        val intent = Intent(requireContext(), FeaturedActivity::class.java)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            } else if (selectedMenu.title == "Pajak") {
-                try {
-                    val intent = Intent(requireContext(), PajakActivity::class.java)
-                    startActivity(intent)
-                } catch (e: Exception) {
-                    e.printStackTrace()
-                    Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                "Pajak" -> {
+                    try {
+                        val intent = Intent(requireContext(), PajakActivity::class.java)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
                 }
-            } else {
-                Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
+                "Layanan Kesehatan" -> {
+                    try {
+                        val intent = Intent(requireContext(), KesehatanActivity::class.java)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                "Kontak Darurat" -> {
+                    try {
+                        val intent = Intent(requireContext(), DaruratActivity::class.java)
+                        startActivity(intent)
+                    } catch (e: Exception) {
+                        e.printStackTrace()
+                        Toast.makeText(requireContext(), "Gagal membuka halaman: ${e.message}", Toast.LENGTH_SHORT).show()
+                    }
+                }
+                else -> {
+                    Toast.makeText(requireContext(), "Buka: ${selectedMenu.title}", Toast.LENGTH_SHORT).show()
+                }
             }
         }
 

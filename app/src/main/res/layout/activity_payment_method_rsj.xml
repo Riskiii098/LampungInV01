@@ -219,7 +219,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rp 20.000"
+                android:text="Rp 260.000"
                 android:fontFamily="sans-serif-medium"
                 android:textSize="18sp"
                 android:textColor="@color/black"

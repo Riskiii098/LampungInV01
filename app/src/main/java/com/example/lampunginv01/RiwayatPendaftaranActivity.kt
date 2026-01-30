@@ -2,17 +2,16 @@ package com.example.lampunginv01
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.lampunginv01.databinding.ActivityDaruratBinding
+import com.example.lampunginv01.databinding.ActivityRiwayatPendaftaranBinding
 
-class DaruratActivity : AppCompatActivity() {
+class RiwayatPendaftaranActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityDaruratBinding
+    private lateinit var binding: ActivityRiwayatPendaftaranBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityDaruratBinding.inflate(layoutInflater)
+        binding = ActivityRiwayatPendaftaranBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         // Handle System Bar Insets
@@ -22,24 +21,13 @@ class DaruratActivity : AppCompatActivity() {
             insets
         }
 
-        setupActions()
-    }
-
-    private fun setupActions() {
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
         }
 
-        binding.cardDarurat1.setOnClickListener {
-            startActivity(Intent(this, KontakDaruratActivity::class.java))
-        }
-
-        binding.cardDarurat2.setOnClickListener {
-            Toast.makeText(this, "Menu Laporan Bencana Dipilih", Toast.LENGTH_SHORT).show()
-        }
-
-        binding.cardDarurat3.setOnClickListener {
-            Toast.makeText(this, "Menu Posko Keamanan Dipilih", Toast.LENGTH_SHORT).show()
+        binding.tvDetail.setOnClickListener {
+            val intent = Intent(this, PaymentReceiptRsjActivity::class.java)
+            startActivity(intent)
         }
     }
 }

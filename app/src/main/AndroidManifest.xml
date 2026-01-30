@@ -61,6 +61,9 @@
                                                                                                     android:name=".MenuSpesialActivity" />
         <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -99,6 +102,9 @@
         <activity android:name=".InformasiLainnyaActivity" />
         <activity android:name=".PilihLayananActivity" />
         <activity android:name=".PaymentMethodRsjActivity" />
+        <activity android:name=".PaymentReceiptRsjActivity" />
+        <activity android:name=".RiwayatPendaftaranActivity" />
+        <activity android:name=".KontakDaruratActivity" />
         
     </application>
 

@@ -56,6 +56,9 @@ class KodeQrisActivity : AppCompatActivity() {
             if (getIntent().hasExtra("TOTAL_PRICE")) {
                 intent.putExtra("TOTAL_PRICE", getIntent().getStringExtra("TOTAL_PRICE"))
             }
+            if (getIntent().hasExtra("RECEIPT_TYPE")) {
+                intent.putExtra("RECEIPT_TYPE", getIntent().getStringExtra("RECEIPT_TYPE"))
+            }
             startActivity(intent)
             finish() // Optional: Finish Qris activity so back button goes to main menu
         }
