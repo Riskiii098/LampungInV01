@@ -35,6 +35,9 @@ class PaymentSuccessActivity : AppCompatActivity() {
 
         binding.btnFinish.setOnClickListener {
             val intent = Intent(this, PaymentReceiptActivity::class.java)
+            if (getIntent().hasExtra("TOTAL_PRICE")) {
+                intent.putExtra("TOTAL_PRICE", getIntent().getStringExtra("TOTAL_PRICE"))
+            }
             startActivity(intent)
             finish() // Optional: Finish success screen so back button from receipt doesn't go back here
         }

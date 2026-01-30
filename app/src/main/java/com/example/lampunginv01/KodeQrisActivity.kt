@@ -23,6 +23,11 @@ class KodeQrisActivity : AppCompatActivity() {
         setupUI()
         setupListeners()
         startTimer()
+
+        val totalPrice = intent.getStringExtra("TOTAL_PRICE")
+        if (totalPrice != null) {
+            binding.tvTotalPayment.text = totalPrice
+        }
     }
 
     private fun setupUI() {
@@ -48,6 +53,9 @@ class KodeQrisActivity : AppCompatActivity() {
 
         binding.tvRefreshStatus.setOnClickListener {
             val intent = android.content.Intent(this, PaymentSuccessActivity::class.java)
+            if (getIntent().hasExtra("TOTAL_PRICE")) {
+                intent.putExtra("TOTAL_PRICE", getIntent().getStringExtra("TOTAL_PRICE"))
+            }
             startActivity(intent)
             finish() // Optional: Finish Qris activity so back button goes to main menu
         }

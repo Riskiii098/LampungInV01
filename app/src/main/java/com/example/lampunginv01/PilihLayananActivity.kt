@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.text.Html
 import android.widget.Toast
@@ -37,7 +38,7 @@ class PilihLayananActivity : AppCompatActivity() {
         }
 
         binding.btnSelanjutnya.setOnClickListener {
-            Toast.makeText(this, "Tombol Selanjutnya ditekan", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, PaymentMethodRsjActivity::class.java))
         }
     }
 }
