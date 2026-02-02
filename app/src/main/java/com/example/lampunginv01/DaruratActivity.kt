@@ -35,7 +35,7 @@ class DaruratActivity : AppCompatActivity() {
         }
 
         binding.cardDarurat2.setOnClickListener {
-            Toast.makeText(this, "Menu Laporan Bencana Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, InfoAmbulansActivity::class.java))
         }
 
         binding.cardDarurat3.setOnClickListener {

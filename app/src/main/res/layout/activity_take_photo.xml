@@ -135,8 +135,8 @@
                     android:layout_weight="1"
                     android:layout_marginStart="8dp"
                     android:text="Gunakan"
-                    android:textColor="#F8C300"
-                    android:backgroundTint="@color/white"
+                    android:textColor="@color/white"
+                    android:backgroundTint="#F8C300"
                     app:cornerRadius="8dp"
                     android:paddingVertical="18dp"
                     android:textAllCaps="false"/>

@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.graphics.Typeface
 import android.os.Bundle
 import android.text.InputType
@@ -74,7 +75,7 @@ class ProfileFragment : Fragment() {
         }
 
         binding.tvRegister.setOnClickListener {
-            Toast.makeText(requireContext(), "Buat Akun diklik", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(requireContext(), RegisterNameActivity::class.java))
         }
     }
 

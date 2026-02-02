@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    tools:context=".RegisterTermsActivity">
+
+    <!-- Progress Capsules -->
+    <LinearLayout
+        android:id="@+id/progressContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_inactive"
+            android:layout_marginEnd="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_inactive"
+            android:layout_marginEnd="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_inactive"
+            android:layout_marginEnd="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_inactive"
+            android:layout_marginEnd="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_inactive"
+            android:layout_marginEnd="4dp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_capsule_active" />
+            
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Syarat dan Ketentuan"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="sans-serif-medium"
+        android:layout_marginTop="24dp"
+        app:layout_constraintTop_toBottomOf="@id/progressContainer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle"
+        app:layout_constraintBottom_toTopOf="@id/cbAgree"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dengan mengunduh, mengakses, dan menggunakan aplikasi Lampungin, pengguna dianggap telah membaca, memahami, dan menyetujui seluruh syarat dan ketentuan berikut.\n\n1. Definisi\nLampungin adalah aplikasi layanan digital terpadu milik Pemerintah Provinsi Lampung yang menyediakan akses informasi dan layanan publik.\nPengguna adalah setiap individu yang mengakses dan menggunakan aplikasi Lampungin.\nLayanan adalah seluruh fitur dan informasi yang tersedia di dalam aplikasi Lampungin.\n\n2. Ruang Lingkup Layanan\nLampungin menyediakan layanan informasi dan akses digital, antara lain:\nLayanan administrasi publik\nInformasi fasilitas umum\nTransportasi dan destinasi wisata\nPembayaran dan pelaporan tertentu yang terintegrasi dengan instansi terkait\nJenis layanan dapat berubah atau dikembangkan sewaktu-waktu sesuai kebijakan pengelola.\n\n3. Akun dan Data Pengguna\nPengguna bertanggung jawab atas kebenaran data yang diberikan.\nPengguna wajib menjaga kerahasiaan akun dan informasi pribadinya.\nLampungin tidak bertanggung jawab atas penyalahgunaan akun akibat kelalaian pengguna.\n\n4. Penggunaan Layanan\nPengguna dilarang:\nMenggunakan aplikasi untuk tujuan melanggar hukum.\nMemberikan informasi palsu, menyesatkan, atau tidak sah.\nMengganggu, merusak, atau mencoba mengakses sistem Lampungin tanpa izin.\n\n5. Pembayaran dan Transaksi\nTransaksi pembayaran dilakukan melalui mitra resmi yang terintegrasi.\nLampungin tidak memproses dana secara langsung.\nStatus transaksi dapat memerlukan waktu verifikasi sesuai ketentuan instansi terkait.\nLampungin tidak bertanggung jawab atas keterlambatan yang disebabkan oleh pihak ketiga atau gangguan sistem di luar kendali.\n\n6. Validasi dan Proses Layanan\nBeberapa layanan memerlukan proses validasi oleh instansi terkait.\nWaktu penyelesaian layanan dapat berbeda tergantung jenis layanan dan jam operasional.\nPengguna diharapkan memantau status layanan secara berkala melalui aplikasi.\n\n7. Hak Kekayaan Intelektual\nSeluruh konten, desain, logo, dan sistem dalam aplikasi Lampungin dilindungi oleh peraturan perundang-undangan dan tidak boleh digunakan tanpa izin resmi.\n\n8. Pembatasan Tanggung Jawab\nLampungin berupaya memberikan layanan terbaik, namun tidak menjamin:\nLayanan bebas dari gangguan teknis.\nInformasi selalu tersedia tanpa jeda waktu.\nKetepatan layanan pihak ketiga.\n\n9. Perubahan Syarat dan Ketentuan\nSyarat dan ketentuan ini dapat diperbarui sewaktu-waktu. Perubahan akan diinformasikan melalui aplikasi dan mulai berlaku sejak tanggal ditetapkan.\n\n10. Hukum yang Berlaku\nSyarat dan ketentuan ini tunduk dan ditafsirkan berdasarkan hukum yang berlaku di Republik Indonesia."
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:fontFamily="sans-serif-light"
+            android:lineSpacingExtra="4dp" />
+    </ScrollView>
+
+    <CheckBox
+        android:id="@+id/cbAgree"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ya, saya telah membaca dan setuju"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:button="@drawable/selector_checkbox"
+        app:buttonTint="@null"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@id/btnRegister" />
+
+    <TextView
+        android:id="@+id/btnSkip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lain Kali"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/btnRegister"
+        app:layout_constraintTop_toTopOf="@id/btnRegister" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:minHeight="0dp"
+        android:paddingVertical="0dp"
+        android:paddingHorizontal="48dp"
+        android:background="@drawable/bg_button_yellow"
+        android:text="Daftar"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        android:stateListAnimator="@null"
+        android:elevation="0dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

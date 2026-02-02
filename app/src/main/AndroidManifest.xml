@@ -104,7 +104,22 @@
         <activity android:name=".PaymentMethodRsjActivity" />
         <activity android:name=".PaymentReceiptRsjActivity" />
         <activity android:name=".RiwayatPendaftaranActivity" />
+        <activity android:name=".RegisterNameActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterUsernameActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterEmailActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterPasswordActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterPhoneActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterTermsActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".RegisterSuccessActivity" 
+            android:screenOrientation="portrait" />
         <activity android:name=".KontakDaruratActivity" />
+        <activity android:name=".InfoAmbulansActivity" />
         
     </application>
 
