@@ -4,4 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="soft_yellow_white">#FFFEF7</color>
     <color name="soft_yellow_gradient_start">#66FDD835</color>
+    <color name="yellow_primary">#F8C300</color>
+    <color name="yellow_asn">#F5B000</color>
+    <color name="grey_light">#E0E0E0</color>
 </resources>

@@ -145,6 +145,14 @@
         <activity android:name=".HotelActivity" />
         <activity android:name=".CekHargaPanganActivity" />
         <activity android:name=".KomoditasActivity" />
+        <activity android:name=".AsnVerificationActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".AsnEmailVerificationActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".AsnOtpVerificationActivity" 
+            android:screenOrientation="portrait" />
+        <activity android:name=".AsnSuccessActivity" 
+            android:screenOrientation="portrait" />
         
     </application>
 

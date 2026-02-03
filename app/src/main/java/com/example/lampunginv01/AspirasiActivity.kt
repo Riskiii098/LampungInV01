@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,8 +31,7 @@ class AspirasiActivity : AppCompatActivity() {
         }
 
         binding.cardLaporanWarga.setOnClickListener {
-            Toast.makeText(this, "Menu Laporan Dipilih", Toast.LENGTH_SHORT).show()
-            // TODO: Navigate to CitizenReportActivity or similar if needed
+            startActivity(Intent(this, MakeReportActivity::class.java))
         }
 
         binding.cardLaporanAktivitas.setOnClickListener {

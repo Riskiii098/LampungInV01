@@ -45,6 +45,17 @@ class ProfileFragment : Fragment() {
 
         setupAction()
         setupTermsText()
+        checkLoginStatus()
+    }
+
+    private fun checkLoginStatus() {
+        if (SessionManager.isLoggedIn) {
+            binding.layoutGuest.visibility = View.GONE
+            binding.layoutLoggedIn.visibility = View.VISIBLE
+        } else {
+            binding.layoutGuest.visibility = View.VISIBLE
+            binding.layoutLoggedIn.visibility = View.GONE
+        }
     }
 
     private fun setupAction() {
@@ -63,10 +74,17 @@ class ProfileFragment : Fragment() {
         }
 
         binding.btnLogin.setOnClickListener {
-            (activity as? MainActivity)?.let { mainActivity ->
-                mainActivity.loadFragment(HomeFragment())
-                mainActivity.updateBottomNavUI(0)
-            }
+            // Simulasi Login Berhasil
+            SessionManager.isLoggedIn = true
+            checkLoginStatus()
+            Toast.makeText(requireContext(), "Login Berhasil", Toast.LENGTH_SHORT).show()
+        }
+
+        binding.btnLogout.setOnClickListener {
+            // Logout logic
+            SessionManager.isLoggedIn = false
+            checkLoginStatus()
+            Toast.makeText(requireContext(), "Berhasil Keluar Akun", Toast.LENGTH_SHORT).show()
         }
 
         binding.tvForgotPassword.setOnClickListener {
@@ -79,6 +97,10 @@ class ProfileFragment : Fragment() {
 
         binding.tvRegister.setOnClickListener {
             startActivity(Intent(requireContext(), RegisterNameActivity::class.java))
+        }
+
+        binding.tvUpgradeAsn.setOnClickListener {
+            startActivity(Intent(requireContext(), AsnVerificationActivity::class.java))
         }
     }
 

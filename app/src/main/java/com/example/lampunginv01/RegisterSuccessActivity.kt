@@ -22,7 +22,11 @@ class RegisterSuccessActivity : AppCompatActivity() {
         binding.tvDesc.text = Html.fromHtml(description, Html.FROM_HTML_MODE_LEGACY)
 
         binding.btnClose.setOnClickListener {
+            // Simpan status login di memori saja
+            SessionManager.isLoggedIn = true
+
             val intent = Intent(this, MainActivity::class.java)
+            intent.putExtra("TARGET_TAB", 4) // Target ke tab Profile
             intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             startActivity(intent)
         }

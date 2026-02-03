@@ -69,6 +69,8 @@ class MainActivity : AppCompatActivity() {
                     frag
                 }
                 2 -> ReportFragment()
+                3 -> NotificationFragment()
+                4 -> ProfileFragment()
                 else -> HomeFragment()
             }
             loadFragment(fragment)
