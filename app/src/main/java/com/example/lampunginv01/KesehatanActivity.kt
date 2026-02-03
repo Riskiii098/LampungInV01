@@ -31,11 +31,11 @@ class KesehatanActivity : AppCompatActivity() {
         }
 
         binding.cardKesehatan1.setOnClickListener {
-            Toast.makeText(this, "Menu Fasilitas Kesehatan Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Antrean Faskes Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardRekomendasi.setOnClickListener {
-            Toast.makeText(this, "Menu Konsultasi Online Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Layanan BPJS Kesehatan Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardKesehatan2.setOnClickListener {
@@ -43,7 +43,7 @@ class KesehatanActivity : AppCompatActivity() {
         }
 
         binding.cardKesehatan3.setOnClickListener {
-            Toast.makeText(this, "Menu Ketersediaan Kamar Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu RSUDAM Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardKesehatan4.setOnClickListener {
@@ -51,7 +51,7 @@ class KesehatanActivity : AppCompatActivity() {
         }
 
         binding.cardKesehatan5.setOnClickListener {
-            Toast.makeText(this, "Menu Donor Darah Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Lokasi Fasyankes Terdekat Dipilih", Toast.LENGTH_SHORT).show()
         }
     }
 }

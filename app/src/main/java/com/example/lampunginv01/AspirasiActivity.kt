@@ -30,12 +30,12 @@ class AspirasiActivity : AppCompatActivity() {
         }
 
         binding.cardLaporanWarga.setOnClickListener {
-            Toast.makeText(this, "Menu Laporan Warga Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Laporan Dipilih", Toast.LENGTH_SHORT).show()
             // TODO: Navigate to CitizenReportActivity or similar if needed
         }
 
         binding.cardLaporanAktivitas.setOnClickListener {
-            Toast.makeText(this, "Menu Laporan Aktivitas Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Survey Kepuasan Masyarakat Dipilih", Toast.LENGTH_SHORT).show()
             // TODO: Navigate to Activity List if needed
         }
     }

@@ -35,7 +35,7 @@ class RsjActivity : AppCompatActivity() {
         }
 
         binding.cardRsj2.setOnClickListener {
-             Toast.makeText(this, "Menu Jadwal Dokter Dipilih", Toast.LENGTH_SHORT).show()
+             Toast.makeText(this, "Menu Konsultasi Kesehatan Mental Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.bottomBar.setOnClickListener {

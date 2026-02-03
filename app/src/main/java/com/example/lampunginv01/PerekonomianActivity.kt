@@ -34,7 +34,7 @@ class PerekonomianActivity : AppCompatActivity() {
         }
 
         binding.cardEkonomi2.setOnClickListener {
-            Toast.makeText(this, "Menu Harga Pangan Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(android.content.Intent(this, CekHargaPanganActivity::class.java))
         }
     }
 }

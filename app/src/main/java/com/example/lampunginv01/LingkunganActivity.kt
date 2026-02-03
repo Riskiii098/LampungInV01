@@ -38,15 +38,15 @@ class LingkunganActivity : AppCompatActivity() {
         }
 
         binding.cardLingkungan3.setOnClickListener {
-            Toast.makeText(this, "Menu Informasi TPS/TPA Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Perizinan Tata Ruang (Simtaru) Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardLingkungan4.setOnClickListener {
-            Toast.makeText(this, "Menu Pengujian Kualitas Air Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Dinas Energi dan Sumber Daya (ESDM) Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardLingkungan5.setOnClickListener {
-            Toast.makeText(this, "Menu AMDAL Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Dinas Lingkungan Hidup (DLH) Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardLingkungan6.setOnClickListener {

@@ -34,7 +34,7 @@ class KarirUsahaActivity : AppCompatActivity() {
         }
 
         binding.cardKarir2.setOnClickListener {
-            Toast.makeText(this, "Menu Pelatihan UMKM Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Perizinan Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardKarir3.setOnClickListener {

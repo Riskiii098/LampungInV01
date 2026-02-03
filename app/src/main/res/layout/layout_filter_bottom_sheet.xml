@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_bottom_sheet_rounded_10"
+    android:padding="24dp">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_drag_handle"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Section: Kabupaten/Kota -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kabupaten/Kota"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Row 1 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/chip_bandar_lampung"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kota Bandar Lampung"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/chip_lampung_barat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kab. Lampung Barat"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Row 2 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:id="@+id/chip_tanggamus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kab. Tanggamus"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/chip_lampung_selatan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kab. Lampung Selatan"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <!-- Row 3 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="24dp">
+
+        <TextView
+            android:id="@+id/chip_lampung_timur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kab. Lampung Timur"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:layout_marginEnd="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+
+        <TextView
+            android:id="@+id/chip_lampung_tengah"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Kab. Lampung Tengah"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:background="@drawable/bg_white_rounded_50"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="8dp"
+            android:clickable="true"
+            android:focusable="true"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lihat Semua"
+        android:textSize="12sp"
+        android:textColor="@color/black"
+        android:layout_gravity="end"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Section: Kecamatan -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kecamatan"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:textColor="@color/black"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Placeholder State -->
+    <TextView
+        android:id="@+id/tv_hint_kecamatan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Kabupaten"
+        android:textSize="12sp"
+        android:textColor="#757575"
+        android:background="@drawable/bg_white_rounded_50"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="8dp"
+        android:visibility="visible"/>
+
+    <!-- List State (Hidden initially) -->
+    <LinearLayout
+        android:id="@+id/layout_list_kecamatan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <!-- Row 1 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/chip_teluk_betung"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teluk Betung Selatan"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chip_bumi_waras"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bumi Waras"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Row 2 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/chip_panjang"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Panjang"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chip_kedamaian"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kedamaian"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <!-- Row 3 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <TextView
+                android:id="@+id/chip_tanjung_pusat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanjung Karang Pusat"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:layout_marginEnd="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+
+            <TextView
+                android:id="@+id/chip_tanjung_barat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tanjung Karang Barat"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:background="@drawable/bg_white_rounded_50"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:clickable="true"
+                android:focusable="true"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lihat Semua"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+</LinearLayout>

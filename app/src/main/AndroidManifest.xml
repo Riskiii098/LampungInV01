@@ -136,6 +136,7 @@
         <activity android:name=".KebudayaanActivity" />
         <activity android:name=".ReligiActivity" />
         <activity android:name=".HotelActivity" />
+        <activity android:name=".CekHargaPanganActivity" />
         
     </application>
 

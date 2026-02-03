@@ -30,11 +30,11 @@ class SosialKeagamaanActivity : AppCompatActivity() {
         }
 
         binding.cardSosial1.setOnClickListener {
-            Toast.makeText(this, "Menu Bantuan Sosial Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Informasi dan Cek Bansos Dipilih", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardSosial2.setOnClickListener {
-            Toast.makeText(this, "Menu Rumah Ibadah Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Menu Pembayaran Zakat (Baznas) Dipilih", Toast.LENGTH_SHORT).show()
         }
     }
 }
