@@ -37,6 +37,10 @@
                                                             android:name=".PendidikanActivity"
                                                             android:exported="false"
                                                             android:screenOrientation="portrait" />
+                                                        <activity
+                                                            android:name=".BeasiswaDetailActivity"
+                                                            android:exported="false"
+                                                            android:screenOrientation="portrait" />
                                                                 <activity
                                                                     android:name=".InformasiPublikActivity"
                                                                     android:exported="false"
@@ -45,11 +49,14 @@
                                                                             android:name=".SosialKeagamaanActivity"
                                                                             android:exported="false"
                                                                             android:screenOrientation="portrait" />
-                                                                                <activity
-                                                                                    android:name=".KarirUsahaActivity"
-                                                                                    android:exported="false"
-                                                                                    android:screenOrientation="portrait" />
-                                                                                        <activity
+                                                                                                                                        <activity
+                                                                                                                                            android:name=".KarirUsahaActivity"
+                                                                                                                                            android:exported="false"
+                                                                                                                                            android:screenOrientation="portrait" />
+                                                                                                                                        <activity
+                                                                                                                                            android:name=".LowonganKerjaActivity"
+                                                                                                                                            android:exported="false"
+                                                                                                                                            android:screenOrientation="portrait" />                                                                                        <activity
                                                                                             android:name=".LingkunganActivity"
                                                                                             android:exported="false"
                                                                                             android:screenOrientation="portrait" />

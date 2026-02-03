@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -30,19 +31,20 @@ class KarirUsahaActivity : AppCompatActivity() {
         }
 
         binding.cardKarir1.setOnClickListener {
-            Toast.makeText(this, "Menu Lowongan Kerja Dipilih", Toast.LENGTH_SHORT).show()
+            val intent = Intent(this, LowonganKerjaActivity::class.java)
+            startActivity(intent)
         }
 
         binding.cardKarir2.setOnClickListener {
-            Toast.makeText(this, "Menu Perizinan Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Fitur Perizinan belum tersedia", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardKarir3.setOnClickListener {
-            Toast.makeText(this, "Menu Pelatihan Kerja Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Fitur Pelatihan Kerja belum tersedia", Toast.LENGTH_SHORT).show()
         }
 
         binding.cardKarir4.setOnClickListener {
-            Toast.makeText(this, "Menu Info Magang Dipilih", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Fitur Info Magang belum tersedia", Toast.LENGTH_SHORT).show()
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.example.lampunginv01
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -27,6 +28,11 @@ class PendidikanActivity : AppCompatActivity() {
     private fun setupActions() {
         binding.btnBack.setOnClickListener {
             onBackPressedDispatcher.onBackPressed()
+        }
+
+        binding.tvLihatDetailBeasiswa.setOnClickListener {
+            val intent = Intent(this, BeasiswaDetailActivity::class.java)
+            startActivity(intent)
         }
 
         binding.cardBeasiswa1.setOnClickListener {
