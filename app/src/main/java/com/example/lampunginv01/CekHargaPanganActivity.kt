@@ -77,9 +77,9 @@ class CekHargaPanganActivity : AppCompatActivity() {
             for (chip in kabupatenChips) {
                 chip.setOnClickListener {
                     // Reset all
-                    kabupatenChips.forEach { it.setBackgroundResource(R.drawable.bg_white_rounded_50) }
+                    kabupatenChips.forEach { it.setBackgroundResource(R.drawable.bg_white_rounded_50_black) }
                     // Set selected
-                    chip.setBackgroundResource(R.drawable.bg_gray_rounded_50)
+                    chip.setBackgroundResource(R.drawable.bg_gray_rounded_50_black)
                     
                     // Show Kecamatan
                     hintKecamatan.visibility = android.view.View.GONE
@@ -94,9 +94,9 @@ class CekHargaPanganActivity : AppCompatActivity() {
             for (chip in kecamatanChips) {
                 chip.setOnClickListener {
                     // Reset all
-                    kecamatanChips.forEach { it.setBackgroundResource(R.drawable.bg_white_rounded_50) }
+                    kecamatanChips.forEach { it.setBackgroundResource(R.drawable.bg_white_rounded_50_black) }
                     // Set selected
-                    chip.setBackgroundResource(R.drawable.bg_gray_rounded_50)
+                    chip.setBackgroundResource(R.drawable.bg_gray_rounded_50_black)
                     
                     // Update Main Activity Text
                     binding.tvFilterKecamatan.text = chip.text
@@ -118,6 +118,12 @@ class CekHargaPanganActivity : AppCompatActivity() {
             if (currentPage > 0) {
                 currentPage--
                 updateUI()
+            }
+        }
+
+        binding.card1.setOnClickListener {
+            if (currentPage == 0) {
+                startActivity(android.content.Intent(this, KomoditasActivity::class.java))
             }
         }
 

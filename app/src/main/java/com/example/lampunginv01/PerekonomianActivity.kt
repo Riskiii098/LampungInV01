@@ -30,7 +30,7 @@ class PerekonomianActivity : AppCompatActivity() {
         }
 
         binding.cardEkonomi1.setOnClickListener {
-            Toast.makeText(this, "Menu Pajak Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(android.content.Intent(this, PajakActivity::class.java))
         }
 
         binding.cardEkonomi2.setOnClickListener {
