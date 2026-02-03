@@ -13,7 +13,14 @@ class PaymentHistoryActivity : AppCompatActivity() {
 
         val btnBack = findViewById<ImageView>(R.id.btn_back)
         btnBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            if (intent.getBooleanExtra("FROM_RECEIPT", false)) {
+                val homeIntent = android.content.Intent(this, MainActivity::class.java)
+                homeIntent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP or android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(homeIntent)
+                finish()
+            } else {
+                onBackPressedDispatcher.onBackPressed()
+            }
         }
 
         findViewById<android.widget.TextView>(R.id.tv_detail).setOnClickListener {

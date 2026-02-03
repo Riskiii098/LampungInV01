@@ -105,7 +105,10 @@ class ReportSuccessActivity : AppCompatActivity() {
 
         // Tombol Cek Status
         btnCheckStatus.setOnClickListener {
-            goToActivityTab()
+            val intent = Intent(this, DetailRiwayatActivity::class.java)
+            intent.putExtra("FROM_SUCCESS", true)
+            startActivity(intent)
+            finish()
         }
 
         // Tombol Kembali
@@ -115,7 +118,10 @@ class ReportSuccessActivity : AppCompatActivity() {
 
         // Tombol Close (X)
         ivClose.setOnClickListener {
-            goToActivityTab()
+            val intent = Intent(this, DetailRiwayatActivity::class.java)
+            intent.putExtra("FROM_SUCCESS", true)
+            startActivity(intent)
+            finish()
         }
     }
 }

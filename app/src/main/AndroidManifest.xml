@@ -120,6 +120,22 @@
             android:screenOrientation="portrait" />
         <activity android:name=".KontakDaruratActivity" />
         <activity android:name=".InfoAmbulansActivity" />
+        <activity android:name=".BankDarahActivity" />
+        <activity android:name=".WifiActivity" />
+        <activity android:name=".RptraActivity" />
+        <activity android:name=".RthActivity" />
+        <activity android:name=".BankActivity" />
+        <activity android:name=".PerpustakaanActivity" />
+        <activity android:name=".SaranaOlahragaActivity" />
+        <activity android:name=".BusStopActivity" />
+        <activity android:name=".StasiunActivity" />
+        <activity android:name=".TamanRekreasiActivity" />
+        <activity android:name=".KulinerActivity" />
+        <activity android:name=".BelanjaActivity" />
+        <activity android:name=".DestinasiAlamActivity" />
+        <activity android:name=".KebudayaanActivity" />
+        <activity android:name=".ReligiActivity" />
+        <activity android:name=".HotelActivity" />
         
     </application>
 

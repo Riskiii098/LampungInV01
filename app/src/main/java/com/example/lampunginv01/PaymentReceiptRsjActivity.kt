@@ -23,12 +23,15 @@ class PaymentReceiptRsjActivity : AppCompatActivity() {
         }
 
         binding.btnClose.setOnClickListener {
+            val intent = android.content.Intent(this, RiwayatPendaftaranActivity::class.java)
+            intent.putExtra("FROM_RECEIPT", true)
+            startActivity(intent)
             finish()
         }
 
         binding.btnHome.setOnClickListener {
-            val intent = android.content.Intent(this, KesehatanActivity::class.java)
-            intent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP or android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP
+            val intent = android.content.Intent(this, MainActivity::class.java)
+            intent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP or android.content.Intent.FLAG_ACTIVITY_NEW_TASK
             startActivity(intent)
             finish()
         }

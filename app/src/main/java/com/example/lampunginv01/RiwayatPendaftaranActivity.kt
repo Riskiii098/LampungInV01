@@ -22,7 +22,14 @@ class RiwayatPendaftaranActivity : AppCompatActivity() {
         }
 
         binding.btnBack.setOnClickListener {
-            onBackPressedDispatcher.onBackPressed()
+            if (intent.getBooleanExtra("FROM_RECEIPT", false)) {
+                val homeIntent = Intent(this, MainActivity::class.java)
+                homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(homeIntent)
+                finish()
+            } else {
+                onBackPressedDispatcher.onBackPressed()
+            }
         }
 
         binding.tvDetail.setOnClickListener {

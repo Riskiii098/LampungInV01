@@ -144,7 +144,7 @@
                             android:button="@drawable/selector_checkbox"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            app:useMaterialThemeColors="false" />
+                            app:buttonTint="@null" />
                     </LinearLayout>
 
                     <!-- Card 2: Surat Keterangan Sehat Rohani -->
@@ -181,7 +181,7 @@
                             android:button="@drawable/selector_checkbox"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            app:useMaterialThemeColors="false" />
+                            app:buttonTint="@null" />
                     </LinearLayout>
 
                     <!-- Card 3: Surat Keterangan Sehat Jasmani -->
@@ -218,7 +218,7 @@
                             android:button="@drawable/selector_checkbox"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            app:useMaterialThemeColors="false" />
+                            app:buttonTint="@null" />
                     </LinearLayout>
 
                     <!-- Card 4: Bebas Narkoba 6 Parameter -->
@@ -269,7 +269,7 @@
                             android:button="@drawable/selector_checkbox"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            app:useMaterialThemeColors="false" />
+                            app:buttonTint="@null" />
                     </LinearLayout>
 
                     <!-- Card 5: Bebas Narkoba 3 Parameter -->
@@ -320,7 +320,7 @@
                             android:button="@drawable/selector_checkbox"
                             android:minWidth="0dp"
                             android:minHeight="0dp"
-                            app:useMaterialThemeColors="false" />
+                            app:buttonTint="@null" />
                     </LinearLayout>
 
                     <!-- Total Price -->

@@ -39,7 +39,7 @@ class DaruratActivity : AppCompatActivity() {
         }
 
         binding.cardDarurat3.setOnClickListener {
-            Toast.makeText(this, "Menu Posko Keamanan Dipilih", Toast.LENGTH_SHORT).show()
+            startActivity(Intent(this, BankDarahActivity::class.java))
         }
     }
 }

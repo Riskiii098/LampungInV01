@@ -89,6 +89,14 @@ class ActivityFragment : Fragment() {
         binding.btnFilterLaporan.setOnClickListener {
             switchDisimpanSubTab(SUB_TAB_LAPORAN)
         }
+
+        binding.btnBacaBerita.setOnClickListener {
+            startActivity(Intent(requireContext(), BeritaActivity::class.java))
+        }
+
+        binding.btnLihatLaporanLainnya.setOnClickListener {
+            startActivity(Intent(requireContext(), CitizenReportActivity::class.java))
+        }
     }
 
     private fun setupTabs() {

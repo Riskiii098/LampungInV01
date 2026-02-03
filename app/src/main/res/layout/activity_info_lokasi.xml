@@ -72,11 +72,14 @@
 
             <!-- Item 1 -->
             <LinearLayout
+                android:id="@+id/btn_wifi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -95,11 +98,14 @@
 
             <!-- Item 2 -->
             <LinearLayout
+                android:id="@+id/btn_rptra"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -118,11 +124,14 @@
 
             <!-- Item 3 -->
             <LinearLayout
+                android:id="@+id/btn_rth"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -141,11 +150,14 @@
 
             <!-- Item 4 -->
             <LinearLayout
+                android:id="@+id/btn_bank"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -173,11 +185,14 @@
 
             <!-- Item 5 -->
             <LinearLayout
+                android:id="@+id/btn_perpustakaan"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -196,11 +211,14 @@
 
             <!-- Item 6 -->
             <LinearLayout
+                android:id="@+id/btn_olahraga"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -244,11 +262,14 @@
 
             <!-- Item 1 -->
             <LinearLayout
+                android:id="@+id/btn_bus"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -267,11 +288,14 @@
 
             <!-- Item 2 -->
             <LinearLayout
+                android:id="@+id/btn_stasiun"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -318,11 +342,14 @@
 
             <!-- Item 1 -->
             <LinearLayout
+                android:id="@+id/btn_taman"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -341,11 +368,14 @@
 
             <!-- Item 2 -->
             <LinearLayout
+                android:id="@+id/btn_kuliner"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -364,11 +394,14 @@
 
             <!-- Item 3 -->
             <LinearLayout
+                android:id="@+id/btn_belanja"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -387,11 +420,14 @@
 
             <!-- Item 4 -->
             <LinearLayout
+                android:id="@+id/btn_alam"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -419,11 +455,14 @@
 
             <!-- Item 5 -->
             <LinearLayout
+                android:id="@+id/btn_budaya"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -442,11 +481,14 @@
 
             <!-- Item 6 -->
             <LinearLayout
+                android:id="@+id/btn_religi"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"
@@ -465,11 +507,14 @@
             
             <!-- Item 7 -->
             <LinearLayout
+                android:id="@+id/btn_hotel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical"
-                android:gravity="center">
+                android:gravity="center"
+                android:clickable="true"
+                android:focusable="true">
 
                 <ImageView
                     android:layout_width="48dp"

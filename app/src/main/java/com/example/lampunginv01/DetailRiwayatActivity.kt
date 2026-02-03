@@ -26,7 +26,14 @@ class DetailRiwayatActivity : AppCompatActivity() {
         }
 
         binding.ivBack.setOnClickListener {
-            finish()
+            if (intent.getBooleanExtra("FROM_SUCCESS", false)) {
+                val homeIntent = Intent(this, MainActivity::class.java)
+                homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(homeIntent)
+                finish()
+            } else {
+                finish()
+            }
         }
 
         binding.tvSelengkapnya.setOnClickListener {

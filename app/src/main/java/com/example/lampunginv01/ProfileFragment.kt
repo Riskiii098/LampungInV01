@@ -63,7 +63,10 @@ class ProfileFragment : Fragment() {
         }
 
         binding.btnLogin.setOnClickListener {
-            Toast.makeText(requireContext(), "Fitur Login akan segera hadir!", Toast.LENGTH_SHORT).show()
+            (activity as? MainActivity)?.let { mainActivity ->
+                mainActivity.loadFragment(HomeFragment())
+                mainActivity.updateBottomNavUI(0)
+            }
         }
 
         binding.tvForgotPassword.setOnClickListener {

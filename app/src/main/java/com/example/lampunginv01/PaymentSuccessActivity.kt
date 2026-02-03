@@ -33,7 +33,8 @@ class PaymentSuccessActivity : AppCompatActivity() {
             insets
         }
 
-        binding.btnFinish.setOnClickListener {
+        // Auto navigate to Receipt after delay
+        android.os.Handler(android.os.Looper.getMainLooper()).postDelayed({
             val receiptType = intent.getStringExtra("RECEIPT_TYPE")
             val targetActivity = if (receiptType == "RSJ") {
                 PaymentReceiptRsjActivity::class.java
@@ -45,8 +46,8 @@ class PaymentSuccessActivity : AppCompatActivity() {
                 intent.putExtra("TOTAL_PRICE", getIntent().getStringExtra("TOTAL_PRICE"))
             }
             startActivity(intent)
-            finish() // Optional: Finish success screen so back button from receipt doesn't go back here
-        }
+            finish()
+        }, 2500)
     }
 
     private fun startAnimation() {
