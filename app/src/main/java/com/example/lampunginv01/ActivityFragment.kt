@@ -46,9 +46,11 @@ class ActivityFragment : Fragment() {
             insets
         }
 
-        // Cek apakah ada request simulasi data
+        // Cek apakah ada data laporan (dari session atau request simulasi)
         val simulateData = arguments?.getBoolean("SIMULATE_DATA", false) ?: false
-        if (simulateData) {
+        val hasData = simulateData || SessionManager.hasReported
+
+        if (hasData) {
             // Update Angka Statistik
             binding.layoutLaporanContent.tvStatTotalDibuat.text = "1"
             binding.layoutLaporanContent.tvStatusMenungguCount.text = "1"
@@ -57,7 +59,7 @@ class ActivityFragment : Fragment() {
             binding.layoutLaporanContent.tvEmptyLaporan.visibility = View.GONE
             binding.layoutLaporanContent.layoutFilledLaporan.visibility = View.VISIBLE
         } else {
-            // Reset ke Default (Kosong) jika tidak ada simulasi
+            // Reset ke Default (Kosong)
             binding.layoutLaporanContent.tvStatTotalDibuat.text = "0"
             binding.layoutLaporanContent.tvStatusMenungguCount.text = "0"
             binding.layoutLaporanContent.tvEmptyLaporan.visibility = View.VISIBLE

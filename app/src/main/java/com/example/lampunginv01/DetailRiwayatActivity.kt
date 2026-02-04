@@ -27,9 +27,9 @@ class DetailRiwayatActivity : AppCompatActivity() {
 
         binding.ivBack.setOnClickListener {
             if (intent.getBooleanExtra("FROM_SUCCESS", false)) {
-                val homeIntent = Intent(this, MainActivity::class.java)
-                homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(homeIntent)
+                val intent = Intent(this, RiwayatLaporanActivity::class.java)
+                intent.putExtra("GO_TO_HOME", true)
+                startActivity(intent)
                 finish()
             } else {
                 finish()

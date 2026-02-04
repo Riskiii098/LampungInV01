@@ -83,6 +83,7 @@ class ProfileFragment : Fragment() {
         binding.btnLogout.setOnClickListener {
             // Logout logic
             SessionManager.isLoggedIn = false
+            SessionManager.hasReported = false
             checkLoginStatus()
             Toast.makeText(requireContext(), "Berhasil Keluar Akun", Toast.LENGTH_SHORT).show()
         }

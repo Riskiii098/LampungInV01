@@ -24,6 +24,7 @@ class ReviewReportActivity : AppCompatActivity() {
         }
 
         findViewById<com.google.android.material.button.MaterialButton>(R.id.btn_submit).setOnClickListener {
+            SessionManager.hasReported = true
             val intent = android.content.Intent(this, ReportSuccessActivity::class.java)
             startActivity(intent)
         }

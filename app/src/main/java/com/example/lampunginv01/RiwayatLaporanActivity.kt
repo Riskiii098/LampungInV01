@@ -22,7 +22,14 @@ class RiwayatLaporanActivity : AppCompatActivity() {
         }
 
         binding.ivBack.setOnClickListener {
-            finish()
+            if (intent.getBooleanExtra("GO_TO_HOME", false)) {
+                val intent = Intent(this, MainActivity::class.java)
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
+                startActivity(intent)
+                finish()
+            } else {
+                finish()
+            }
         }
 
         binding.cardLaporan.setOnClickListener {
