@@ -62,17 +62,18 @@
     <HorizontalScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="none">
+        android:scrollbars="none"
+        android:fillViewport="true">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:paddingHorizontal="16dp">
 
             <!-- Table Header (Row 1) -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:background="@android:color/white"
@@ -89,7 +90,8 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:text="Nama Komoditas"
                     android:textSize="14sp"
@@ -98,7 +100,8 @@
                     android:layout_marginStart="8dp"/>
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Stok"
                     android:textSize="14sp"
@@ -108,19 +111,10 @@
                     android:layout_marginStart="8dp"/>
 
                 <TextView
-                    android:layout_width="80dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
                     android:layout_height="wrap_content"
                     android:text="Harga"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:textColor="@color/black"
-                    android:gravity="center"
-                    android:layout_marginStart="8dp"/>
-
-                <TextView
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:text="Aksi"
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:textColor="@color/black"
@@ -136,7 +130,7 @@
 
             <!-- Row 1 Content -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingVertical="16dp"
@@ -152,7 +146,8 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:text="Beras Bulog"
                     android:textSize="14sp"
@@ -160,7 +155,8 @@
                     android:layout_marginStart="8dp"/>
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="Belum Ada Stok"
                     android:textSize="14sp"
@@ -168,29 +164,29 @@
                     android:gravity="center"
                     android:layout_marginStart="8dp"/>
 
-                <TextView
-                    android:layout_width="80dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
                     android:layout_height="wrap_content"
-                    android:text="12.400"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
+                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cek Statistik Harga"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    app:backgroundTint="#F8C300"
-                    app:cornerRadius="10dp"
-                    android:paddingVertical="0dp"
-                    android:minHeight="36dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_marginStart="8dp"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="12.400"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"/>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_down"
+                        app:tint="#4CAF50"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Divider Row 1 -->
@@ -201,7 +197,7 @@
 
             <!-- Row 2 Content -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingVertical="16dp"
@@ -217,7 +213,8 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:text="Gula Pasir"
                     android:textSize="14sp"
@@ -225,7 +222,8 @@
                     android:layout_marginStart="8dp"/>
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="100kg"
                     android:textSize="14sp"
@@ -233,29 +231,29 @@
                     android:gravity="center"
                     android:layout_marginStart="8dp"/>
 
-                <TextView
-                    android:layout_width="80dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
                     android:layout_height="wrap_content"
-                    android:text="18.000"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
+                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cek Statistik Harga"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    app:backgroundTint="#F8C300"
-                    app:cornerRadius="10dp"
-                    android:paddingVertical="0dp"
-                    android:minHeight="36dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_marginStart="8dp"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="18.000"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"/>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_up"
+                        app:tint="#F44336"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Divider Row 2 -->
@@ -266,7 +264,7 @@
 
             <!-- Row 3 Content -->
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 android:paddingVertical="16dp"
@@ -282,7 +280,8 @@
                     android:gravity="center"/>
 
                 <TextView
-                    android:layout_width="150dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.5"
                     android:layout_height="wrap_content"
                     android:text="Minyak Goreng Curah"
                     android:textSize="14sp"
@@ -290,7 +289,8 @@
                     android:layout_marginStart="8dp"/>
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
                     android:layout_height="wrap_content"
                     android:text="300Ltr"
                     android:textSize="14sp"
@@ -298,29 +298,29 @@
                     android:gravity="center"
                     android:layout_marginStart="8dp"/>
 
-                <TextView
-                    android:layout_width="80dp"
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
                     android:layout_height="wrap_content"
-                    android:text="17.000"
-                    android:textSize="14sp"
-                    android:textColor="@color/black"
+                    android:orientation="horizontal"
                     android:gravity="center"
-                    android:layout_marginStart="8dp"/>
+                    android:layout_marginStart="8dp">
 
-                <com.google.android.material.button.MaterialButton
-                    android:layout_width="160dp"
-                    android:layout_height="wrap_content"
-                    android:text="Cek Statistik Harga"
-                    android:textSize="12sp"
-                    android:textAllCaps="false"
-                    android:textColor="@android:color/white"
-                    app:backgroundTint="#F8C300"
-                    app:cornerRadius="10dp"
-                    android:paddingVertical="0dp"
-                    android:minHeight="36dp"
-                    android:insetTop="0dp"
-                    android:insetBottom="0dp"
-                    android:layout_marginStart="8dp"/>
+                    <TextView
+                        android:layout_width="60dp"
+                        android:layout_height="wrap_content"
+                        android:text="17.000"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:gravity="end"/>
+
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:src="@drawable/ic_arrow_up"
+                        app:tint="#F44336"
+                        android:layout_marginStart="8dp"/>
+                </LinearLayout>
             </LinearLayout>
 
             <!-- Divider Row 3 (Last Row) -->
