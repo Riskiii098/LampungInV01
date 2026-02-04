@@ -105,10 +105,7 @@ class ReportSuccessActivity : AppCompatActivity() {
 
         // Tombol Cek Status
         btnCheckStatus.setOnClickListener {
-            val intent = Intent(this, DetailRiwayatActivity::class.java)
-            intent.putExtra("FROM_SUCCESS", true)
-            startActivity(intent)
-            finish()
+            goToActivityTab()
         }
 
         // Tombol Kembali

@@ -193,6 +193,12 @@
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
 
+            <!-- Divider Row 1 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
             <!-- Row 2 Content -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -252,6 +258,12 @@
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
 
+            <!-- Divider Row 2 -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
+
             <!-- Row 3 Content -->
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -310,6 +322,12 @@
                     android:insetBottom="0dp"
                     android:layout_marginStart="8dp"/>
             </LinearLayout>
+
+            <!-- Divider Row 3 (Last Row) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#E0E0E0" />
 
         </LinearLayout>
     </HorizontalScrollView>

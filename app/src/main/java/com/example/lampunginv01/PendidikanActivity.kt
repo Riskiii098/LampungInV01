@@ -36,7 +36,8 @@ class PendidikanActivity : AppCompatActivity() {
         }
 
         binding.cardBeasiswa1.setOnClickListener {
-            Toast.makeText(this, "Beasiswa Unggulan Dipilih", Toast.LENGTH_SHORT).show()
+            val dialog = BeasiswaDetailDialog()
+            dialog.show(supportFragmentManager, "BeasiswaDetailDialog")
         }
         binding.cardBeasiswa2.setOnClickListener {
             Toast.makeText(this, "Beasiswa LPDP Dipilih", Toast.LENGTH_SHORT).show()
