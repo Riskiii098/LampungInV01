@@ -59,7 +59,7 @@ class HomeFragment : BaseFragment<FragmentHomeBinding>() {
             when (selectedMenu.title) {
                 "Lainnya" -> {
                     if (activity is MainActivity) {
-                        (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI))
+                        (activity as MainActivity).loadFragment(MenuContainerFragment.newInstance(MenuContainerFragment.TAB_KATEGORI), 0)
                     }
                 }
                 "Laporan" -> {

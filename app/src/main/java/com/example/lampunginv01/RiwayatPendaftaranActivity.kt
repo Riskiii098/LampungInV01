@@ -24,8 +24,9 @@ class RiwayatPendaftaranActivity : AppCompatActivity() {
         binding.btnBack.setOnClickListener {
             if (intent.getBooleanExtra("FROM_RECEIPT", false)) {
                 val homeIntent = Intent(this, MainActivity::class.java)
-                homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(homeIntent)
+                homeIntent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+                val rsjIntent = Intent(this, RsjActivity::class.java)
+                startActivities(arrayOf(homeIntent, rsjIntent))
                 finish()
             } else {
                 onBackPressedDispatcher.onBackPressed()

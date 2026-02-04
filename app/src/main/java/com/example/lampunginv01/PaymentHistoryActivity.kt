@@ -15,8 +15,9 @@ class PaymentHistoryActivity : AppCompatActivity() {
         btnBack.setOnClickListener {
             if (intent.getBooleanExtra("FROM_RECEIPT", false)) {
                 val homeIntent = android.content.Intent(this, MainActivity::class.java)
-                homeIntent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP or android.content.Intent.FLAG_ACTIVITY_NEW_TASK
-                startActivity(homeIntent)
+                homeIntent.flags = android.content.Intent.FLAG_ACTIVITY_CLEAR_TASK or android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                val pajakIntent = android.content.Intent(this, PajakActivity::class.java)
+                startActivities(arrayOf(homeIntent, pajakIntent))
                 finish()
             } else {
                 onBackPressedDispatcher.onBackPressed()

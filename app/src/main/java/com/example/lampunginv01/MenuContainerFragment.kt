@@ -59,9 +59,7 @@ class MenuContainerFragment : Fragment() {
         binding.btnBackContainer.setOnClickListener {
             // Navigate back to HomeFragment
             if (activity is MainActivity) {
-                (activity as MainActivity).loadFragment(HomeFragment())
-                // Also update bottom nav index to 0 (Home)
-                (activity as MainActivity).updateBottomNavUI(0)
+                (activity as MainActivity).loadFragment(HomeFragment(), 0)
             }
         }
     }

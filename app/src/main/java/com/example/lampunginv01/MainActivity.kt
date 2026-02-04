@@ -18,6 +18,7 @@ import androidx.activity.SystemBarStyle
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+    private var selectedTabIndex: Int = 0
 
     override fun onCreate(savedInstanceState: Bundle?) {
         // Force Light Mode
@@ -41,9 +42,16 @@ class MainActivity : AppCompatActivity() {
 
         // Tampilkan HomeFragment saat pertama kali dibuka
         if (savedInstanceState == null) {
-            loadFragment(HomeFragment())
-            updateBottomNavUI(0)
+            loadFragment(HomeFragment(), 0)
             handleIntent(intent)
+        }
+    }
+
+    override fun onBackPressed() {
+        if (selectedTabIndex != 0) {
+            loadFragment(HomeFragment(), 0)
+        } else {
+            super.onBackPressed()
         }
     }
 
@@ -73,23 +81,19 @@ class MainActivity : AppCompatActivity() {
                 4 -> ProfileFragment()
                 else -> HomeFragment()
             }
-            loadFragment(fragment)
-            updateBottomNavUI(targetTab)
+            loadFragment(fragment, targetTab)
         } else if (intent?.getBooleanExtra("OPEN_REPORT", false) == true) {
-            loadFragment(ReportFragment())
-            updateBottomNavUI(2)
+            loadFragment(ReportFragment(), 2)
         }
     }
 
     private fun setupBottomNavigation() {
         binding.bottomNavInclude.navHome.setOnClickListener {
-            loadFragment(HomeFragment())
-            updateBottomNavUI(0)
+            loadFragment(HomeFragment(), 0)
         }
 
         binding.bottomNavInclude.navActivity.setOnClickListener {
-            loadFragment(ActivityFragment())
-            updateBottomNavUI(1)
+            loadFragment(ActivityFragment(), 1)
         }
 
         binding.bottomNavInclude.navReport.setOnClickListener {
@@ -97,17 +101,17 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.bottomNavInclude.navNotification.setOnClickListener {
-            loadFragment(NotificationFragment())
-            updateBottomNavUI(3)
+            loadFragment(NotificationFragment(), 3)
         }
 
         binding.bottomNavInclude.navProfile.setOnClickListener {
-            loadFragment(ProfileFragment())
-            updateBottomNavUI(4)
+            loadFragment(ProfileFragment(), 4)
         }
     }
 
-    fun loadFragment(fragment: Fragment) {
+    fun loadFragment(fragment: Fragment, index: Int) {
+        selectedTabIndex = index
+        updateBottomNavUI(index)
         supportFragmentManager.beginTransaction()
             .replace(binding.fragmentContainer.id, fragment)
             .commit()
@@ -120,8 +124,7 @@ class MainActivity : AppCompatActivity() {
             bundle.putBoolean("SIMULATE_DATA", true)
             fragment.arguments = bundle
         }
-        loadFragment(fragment)
-        updateBottomNavUI(1) // Index 1 is Activity Tab
+        loadFragment(fragment, 1)
     }
 
     fun updateBottomNavUI(index: Int) {
